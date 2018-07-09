@@ -3,7 +3,7 @@
 %\usepackage{amscls}
 \linespread{1}
 %\usepackage[letterpaper,top=1.2in,bottom=1in,right=1.03in,left=1.03in]{geometry}
-\usepackage[letterpaper,top=1.6in,bottom=1.3in,right=1.3in,left=1.3in]{geometry}
+\usepackage[letterpaper,top=1.4in,bottom=1.2in,right=1.3in,left=1.3in]{geometry}
 \usepackage{titlesec}
 \usepackage{lipsum}
 
@@ -201,18 +201,32 @@ Unless otherwise stated, the objects stated here are vectors, and $A$ denotes a 
 
 \begin{enumerate}
 	\item \begin{enumerate}
-		\item The (linear) \textbf{span} of vectors $\set{v_1,v_2,\dots,v_m} \in \R^n$, denoted $\Span \set{v_1,v_2.\dots,v_m}$, is the set of all linear combinations of the collection of vectors. This is a vector space (which will be proved later on in this course).
+		\item \phantom{} [\textbf{12.5}; 5 for equivalent statements of ``all linear combinations of vectors $\set{v_1,v_2,\dots,v_m} \in \R^n$'', 5 for the equivalent statement ``set''; 2.5 for having both in the response]
+		
+		\bigskip
+		
+		The (linear) \textbf{span} of vectors $\set{v_1,v_2,\dots,v_m} \in \R^n$, denoted $\Span \set{v_1,v_2.\dots,v_m}$, is the set of all linear combinations of the collection of vectors. This is a vector space (which will be proved later on in this course).
 		
 		
-		\item A collection of vectors is said to be \textbf{linearly independent} if the equation
-		\begin{align*}
+		\item \phantom{} [\textbf{12.5}; 5 for writing \eqref{eq1}, 5 for equivalent statement of ``trivial solution'', 2.5 for having both in the response]
+		
+		\bigskip
+		
+		A collection of vectors is said to be \textbf{linearly independent} if the equation
+		\begin{align}
+		\label{eq1}
+		\tag{$\star$}
 		\sum_{k=1}^{m} a_k v_k = a_1 v_1 + a_2 v_2 + \dots + a_m v_m = 0
-		\end{align*}
+		\end{align}
 		admits only the trivial solution, ie. $a_1 = \dots = a_m = 0$.
 	\end{enumerate}
 
 
-	\item \uline{$b$ is a linear combination of vectors $\set{a_1,a_2,a_3}$}. To see this, write the matrix in augmented form and row reduce, until we notice that the system admits a unique solution.
+	\item \phantom{} [\textbf{25}; 5 for writing the matrix in augmented form, 5 for solving up to upper triangular form \textit{correctly}, 5 for correct conclusion, 5 for correct justification, 5 for having all of the above]
+	
+	\bigskip
+	
+	\uline{$b$ is a linear combination of vectors $\set{a_1,a_2,a_3}$}. To see this, write the matrix in augmented form and row reduce, until we notice that the system admits a unique solution.
 	
 	\begin{align*}
 	\begin{bmatrix}[c c c | c]
@@ -236,7 +250,7 @@ Unless otherwise stated, the objects stated here are vectors, and $A$ denotes a 
 	or, equivalently (up to rescaling),
 	\begin{align*}
 	\begin{cases}
-		a_1 &= \frac{413}{33} \\
+		a_1 &= \frac{173}{33} \\
 		a_2 &= \frac{85}{3} \\
 		a_3 &= -\frac{20}{11}
 	\end{cases}
@@ -244,7 +258,11 @@ Unless otherwise stated, the objects stated here are vectors, and $A$ denotes a 
 	
 	
 	
-	\item Per the hint given in the question, we attempt to solve the following augmented system (and we use the convention that the variable $x_i$ is assigned to the $i$-th column):
+	\item \phantom{} [\textbf{25}; 5 for writing the matrix in augmented form, 5 for \textit{correctly} row reducing the matrix, 5 for \textit{correctly} stating the free variables and pivot column, 5 for a correct set (as in \eqref{eq2})---or an equivalent statement, 5 for having all of the above]
+	
+	\bigskip
+	
+	Per the hint given in the question, we attempt to solve the following augmented system (and we use the convention that the variable $x_i$ is assigned to the $i$-th column):
 	\begin{align*}
 	\begin{bmatrix}[c c c c | c]
 	1 & 3 & 0 & -4 & 0 \\ 2 & 6 & 0 & -8 & 0
@@ -253,32 +271,40 @@ Unless otherwise stated, the objects stated here are vectors, and $A$ denotes a 
 	\end{bmatrix}
 	\end{align*}
 	so the system has 1 pivot column (the first one), and the rest are free variables. Also, the solution set does not depend on $x_3$. Hence, we have the solution set
-	\begin{align*}
+	\begin{align}
+	\label{eq2}
+	\tag{$\ast$}
 	S = \condset{ x_2 \begin{pmatrix} -3 \\ 1 \\ 0 \\ 0 \\\end{pmatrix} + x_4 \begin{pmatrix} 4 \\ 0 \\ 0 \\ 1 \end{pmatrix} }{x_2, x_4}{ \in}{ \R}
-	\end{align*}
+	\end{align}
 	
 	
 	
-	\item With the image of the canonical basis under $T$ already given, we know we just need to find $T(e_1)$ and $T(e_2)$, and the corresponding standard matrix of linear transformation $M$ is given by
+	\item \phantom{} [\textbf{25}; 5 for stating/acknowledging the definition of the standard matrix, 5 for $T(e_1)$ calculation (as in \eqref{eq3}), 5 for $T(e_2)$ calculation (as in \eqref{eq4}), 5 for the correct matrix $M$ (as in \eqref{eq5}), 5 for all of the above]
+	
+	\bigskip
+	
+	With the image of the canonical basis under $T$ already given, we know we just need to find $T(e_1)$ and $T(e_2)$, and the corresponding standard matrix of linear transformation $M$ is given by
 	\begin{align*}
 	M = \begin{bmatrix}[c c]
 	| & | \\ T(e_1) & T(e_2) \\ | & |
 	\end{bmatrix}
 	\end{align*}
 	so we calculate and see that
-	\begin{align*}
-	T(e_1) &= T\left( \begin{bmatrix} 1 \\ 0 \end{bmatrix} \right) \\
-	&= \begin{bmatrix} 1 \\ 0 \end{bmatrix} \\
-	T(e_2) &= T\left( \begin{bmatrix} 0 \\ 1 \end{bmatrix} \right) \\
-	&= 3 \begin{bmatrix} 1 \\ 0 \end{bmatrix} + 7 \begin{bmatrix} 0 \\ 1 \end{bmatrix} \\
-	&= \begin{bmatrix} 3 \\ 7 \end{bmatrix}
-	\end{align*}
+	\begin{align}
+	\nonumber T(e_1) &= T\left( \begin{bmatrix} 1 \\ 0 \end{bmatrix} \right) \\
+	\label{eq3} \tag{$\star \star$} &= \begin{bmatrix} 1 \\ 0 \end{bmatrix} \\
+	\nonumber T(e_2) &= T\left( \begin{bmatrix} 0 \\ 1 \end{bmatrix} \right) \\
+	\nonumber &= 3 \begin{bmatrix} 1 \\ 0 \end{bmatrix} + 7 \begin{bmatrix} 0 \\ 1 \end{bmatrix} \\
+	\label{eq4} \tag{$\ast \ast$} &= \begin{bmatrix} 3 \\ 7 \end{bmatrix}
+	\end{align}
 	so we have the matrix of linear transformation
-	\begin{align*}
+	\begin{align}
+	\label{eq5}
+	\tag{$\dagger$}
 	M = \begin{bmatrix}[c c]
 	1 & 3 \\ 0 & 7
 	\end{bmatrix}
-	\end{align*}
+	\end{align}
 \end{enumerate}
 
 
