@@ -1,18 +1,15 @@
-\documentclass[answers,11pt]{exam}
-\usepackage[utf8]{inputenc}
+\documentclass[11pt]{amsart}
+%\documentclass[11pt]{article}
+%\usepackage{amscls}
+\linespread{1}
+%\usepackage[letterpaper,top=1.2in,bottom=1in,right=1.03in,left=1.03in]{geometry}
 \usepackage[letterpaper,top=1.4in,bottom=1.2in,right=1.3in,left=1.3in]{geometry}
+\usepackage{titlesec}
+\usepackage{lipsum}
 
-
-\newcommand{\class}{Linear Algebra}
-\newcommand{\term}{Summer 2018}
-\newcommand{\examnum}{Quiz 1}
-\newcommand{\examdate}{07.09.18}
-\newcommand{\timelimit}{20 Minutes}
-
-\pagestyle{head}
-\firstpageheader{}{}{}
-\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
-\runningheadrule
+%\usepackage{libertine}
+%\usepackage[lite,subscriptcorrection,nofontinfo,amsbb,eucal]{mtpro2}
+%slantedGreek
 
 \usepackage{hyphenat}
 \usepackage{graphicx}
@@ -45,6 +42,10 @@
 \usepackage{commath}
 \usepackage{mathtools}
 \allowdisplaybreaks
+
+\title{\textsc{Quiz 1: Suggested Solutions}}
+\thanks{Summer 2018. Instructor: Antonios-Alexandros Robotis.}
+\date{\today}
 
 
 \usepackage{float}
@@ -80,6 +81,18 @@
 \makeatother
 
 
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.5pt}
+\rhead{\textsc{Quiz 1: Suggested Solutions}}
+\lhead{\textsc{Linear Algebra}}
+%\lhead{\textsc{}}
+\cfoot{\thepage}
+
+\usepackage{lmodern}
+
 \newtheoremstyle{mytheoremstyle} % name
 {\topsep}                    % Space above
 {\topsep}                    % Space below
@@ -109,7 +122,7 @@
 \newtheorem{fact}[definition]{Fact}
 
 \theoremstyle{definition}
-
+\newtheorem*{solution}{Solution}
 
 \usepackage{caption}
 \captionsetup[figure]{labelfont=sc}
@@ -178,103 +191,40 @@
 
 \renewcommand{\qedsymbol}{$\blacksquare$}
 
-
-
 \begin{document}
+\sloppy
+\maketitle
 
-\noindent
-\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
-\textbf{\class} & \textbf{Name:} & \makebox[2in]{\hrulefill}\\
-\textbf{\term} &&\\
-\textbf{\examnum} &&\\
-\textbf{\examdate} &&\\
-\textbf{Time Limit: \timelimit} 
-\end{tabular*}\\
-\rule[2ex]{\textwidth}{2pt}
-
-\noindent This quiz contains 2 sides (including this cover page) and 4 questions. Total of points is \numpoints.
-
-
-\begin{center}
-Grade Table (for grader use only)\\
-\addpoints
-\gradetable[v][questions]
-\end{center}
-
-\noindent
-\rule[2ex]{\textwidth}{2pt}
-
-\noindent Few things to note:
-\begin{itemize}
-	\item Unless otherwise stated, the objects stated here are vectors, and $A$ denotes a matrix of a specified dimension.
-	\item Marks breakdown are indicated \textit{after} the solution.
-\end{itemize}
+Unless otherwise stated, the objects stated here are vectors, and $A$ denotes a matrix of a specified dimension.
 
 \bigskip
 
-\begin{questions}
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item \phantom{} [\textbf{12.5}; 5 for equivalent statements of ``all linear combinations of vectors $\set{v_1,v_2,\dots,v_m} \in \R^n$'', 5 for the equivalent statement ``set''; 2.5 for having both in the response]
+		
+		\bigskip
+		
+		The (linear) \textbf{span} of vectors $\set{v_1,v_2,\dots,v_m} \in \R^n$, denoted $\Span \set{v_1,v_2.\dots,v_m}$, is the set of all linear combinations of the collection of vectors. This is a vector space (which will be proved later on in this course).
+		
+		
+		\item \phantom{} [\textbf{12.5}; 5 for writing \eqref{eq1}, 5 for equivalent statement of ``trivial solution'', 2.5 for having both in the response]
+		
+		\bigskip
+		
+		A collection of vectors is said to be \textbf{linearly independent} if the equation
+		\begin{align}
+		\label{eq1}
+		\tag{$\star$}
+		\sum_{k=1}^{m} a_k v_k = a_1 v_1 + a_2 v_2 + \dots + a_m v_m = 0
+		\end{align}
+		admits only the trivial solution, ie. $a_1 = \dots = a_m = 0$.
+	\end{enumerate}
 
-\question[25] State the definition of:
-\noaddpoints
-\begin{parts}
-\part[12.5]The span of the vectors $\vec{v}_1,\ldots, \vec{v}_m$ in $\mathbb{R}^n$.
 
-\begin{solution}
-	The (linear) \textbf{span} of vectors $\set{v_1,v_2,\dots,v_m} \in \R^n$, denoted
-	$$\Span \set{v_1,v_2.\dots,v_m}$$
-	is the set of all linear combinations of the collection of vectors. This is a vector space (which will be proved later on in this course).
+	\item \phantom{} [\textbf{25}; 5 for writing the matrix in augmented form, 5 for solving up to upper triangular form \textit{correctly}, 5 for correct conclusion, 5 for correct justification, 5 for having all of the above]
 	
-	\textit{[5 for equivalent statement of ``all linear combinations of vectors $\set{v_1,v_2,\dots,v_m}  \\ \in \R^n$'', 5 for the equivalent statement of ``set''; 2.5 for having both in the response]}
-\end{solution}
-
-
-\part[12.5] Linear independence of $\{\vec{v}_1,\ldots, \vec{v}_m\}$ in $\mathbb{R}^n$.
-
-\begin{solution}
-	A collection of vectors is said to be \textbf{linearly independent} if the equation
-	\begin{align}
-	\label{eq1}
-	\tag{$\star$}
-	\sum_{k=1}^{m} a_k v_k = a_1 v_1 + a_2 v_2 + \dots + a_m v_m = 0
-	\end{align}
-	admits only the trivial solution, ie. $a_1 = \dots = a_m = 0$.
-	
-	\textit{[5 for writing \eqref{eq1}, 5 for equivalent statement of ``trivial solution'', 2.5 for having both in the response. Other equivalent responses were accepted]}
-\end{solution}
-
-\end{parts}
-\addpoints
-
-\question[25] Determine whether or not the vector $\vec{b}$ is a linear combination of vectors $\vec{a}_1,\vec{a}_2,\vec{a}_3$ where
-\begin{equation*}
-\vec{b}=
-\begin{bmatrix}
-11\\
--5\\
-9
-\end{bmatrix}, 
-\vec{a}_1=
-\begin{bmatrix}
-1\\
-0\\
-1
-\end{bmatrix},
-\vec{a}_2=
-\begin{bmatrix}
--2\\
-3\\
--2
-\end{bmatrix},
-\vec{a}_3=
-\begin{bmatrix}
--6\\
-7\\
-5
-\end{bmatrix}.
-\end{equation*}
-\addpoints
-
-\begin{solution}
+	\bigskip
 	
 	\uline{$b$ is a linear combination of vectors $\set{a_1,a_2,a_3}$}. To see this, write the matrix in augmented form and row reduce, until we notice that the system admits a unique solution.
 	
@@ -288,39 +238,29 @@ Grade Table (for grader use only)\\
 	1 & -2 & -6 & 11 \\ & 3 & 7 & -5 \\  &  & 1 & -\frac{2}{11}
 	\end{bmatrix} \\
 	\end{align*}
+	
 	Reading off the coefficients give us the following solutions:
 	\begin{align*}
 	\begin{cases}
-	a_1 &= 11 - \frac{82}{33} - \frac{12}{11} =  \frac{245}{33} \\
-	a_2 &= \frac{-5 + \frac{14}{11}}{3} = -\frac{41}{33} \\
-	a_3 &= -\frac{2}{11}
+		a_1 &= 11 - \frac{82}{33} - \frac{12}{11} =  \frac{245}{33} \\
+		a_2 &= \frac{-5 + \frac{14}{11}}{3} = -\frac{41}{33} \\
+		a_3 &= -\frac{2}{11}
 	\end{cases}
 	\end{align*}
 	or, equivalently (up to rescaling),
 	\begin{align*}
 	\begin{cases}
-	a_1 &= \frac{173}{33} \\
-	a_2 &= \frac{85}{3} \\
-	a_3 &= -\frac{20}{11}
+		a_1 &= \frac{173}{33} \\
+		a_2 &= \frac{85}{3} \\
+		a_3 &= -\frac{20}{11}
 	\end{cases}
 	\end{align*}
 	
 	
-	\textit{[5 for writing the matrix in augmented form, 5 for solving up to upper triangular form \textit{correctly}, 5 for correct conclusion, 5 for correct justification, 5 for having all of the above]}
-\end{solution}
-
-\question[25] Descibe the solutions to the equation $A\vec{x}=\vec{0}$ in parametric form, where the matrix $A$ is row equivalent to 
-\begin{equation*}
-\begin{bmatrix}
-1&3&0&-4\\
-2&6&0&-8
-\end{bmatrix}.
-\end{equation*}
-That is to say: express the basic variable(s) in terms of the free variable(s). (Hint: The matrix above is not yet augmented, remember to augment it with $\vec{0}$.)
-\addpoints
-
-
-\begin{solution}
+	
+	\item \phantom{} [\textbf{25}; 5 for writing the matrix in augmented form, 5 for \textit{correctly} row reducing the matrix, 5 for \textit{correctly} stating the free variables and pivot column, 5 for a correct set (as in \eqref{eq2})---or an equivalent statement, 5 for having all of the above]
+	
+	\bigskip
 	
 	Per the hint given in the question, we attempt to solve the following augmented system (and we use the convention that the variable $x_i$ is assigned to the $i$-th column):
 	\begin{align*}
@@ -330,27 +270,22 @@ That is to say: express the basic variable(s) in terms of the free variable(s). 
 	1 & 3 & 0 & -4 & 0 \\ 0 & 0 & 0 & 0 & 0
 	\end{bmatrix}
 	\end{align*}
-	so the system has 1 pivot column (the first one), and the rest are free variables. Also, the solution set does depend on $x_3$ by rank-nullity theorem. Hence, we have the solution set
+	so the system has 1 pivot column (the first one), and the rest are free variables. Also, the solution set does not depend on $x_3$. Hence, we have the solution set
 	\begin{align}
 	\label{eq2}
 	\tag{$\ast$}
-	S = \condset{ x_2 \begin{pmatrix} -3 \\ 1 \\ 0 \\ 0 \\\end{pmatrix} + x_3 \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix} + x_4 \begin{pmatrix} 4 \\ 0 \\ 0 \\ 1 \end{pmatrix} }{x_2, x_3, x_4}{ \in}{ \R}
+	S = \condset{ x_2 \begin{pmatrix} -3 \\ 1 \\ 0 \\ 0 \\\end{pmatrix} + x_4 \begin{pmatrix} 4 \\ 0 \\ 0 \\ 1 \end{pmatrix} }{x_2, x_4}{ \in}{ \R}
 	\end{align}
 	
 	
-	\textit{[5 for writing the matrix in augmented form, 5 for \textit{correctly} row reducing the matrix, 5 for \textit{correctly} stating the free variables and pivot column, 5 for a correct set (as in \eqref{eq2})---or an equivalent statement, 5 for having all of the above]}
-\end{solution}
-
-
-
-
-\question[25] Find the standard matrix representation for the linear transformation $T:\mathbb{R}^2\to \mathbb{R}^2$ which sends $\vec{e}_1$ to itself and $\vec{e}_2$ to $3\vec{e}_1+7\vec{e}_2$. That is, $T(\vec{e}_1)=\vec{e}_1$ and $T(\vec{e}_2)=3\vec{e}_1+7\vec{e}_2$. 
-
-\begin{solution}
+	
+	\item \phantom{} [\textbf{25}; 5 for stating/acknowledging the definition of the standard matrix, 5 for $T(e_1)$ calculation (as in \eqref{eq3}), 5 for $T(e_2)$ calculation (as in \eqref{eq4}), 5 for the correct matrix $M$ (as in \eqref{eq5}), 5 for all of the above]
+	
+	\bigskip
 	
 	With the image of the canonical basis under $T$ already given, we know we just need to find $T(e_1)$ and $T(e_2)$, and the corresponding standard matrix of linear transformation $M$ is given by
 	\begin{align*}
-	M = \begin{bmatrix}
+	M = \begin{bmatrix}[c c]
 	| & | \\ T(e_1) & T(e_2) \\ | & |
 	\end{bmatrix}
 	\end{align*}
@@ -370,29 +305,6 @@ That is to say: express the basic variable(s) in terms of the free variable(s). 
 	1 & 3 \\ 0 & 7
 	\end{bmatrix}
 	\end{align}
-	
-	
-	\textit{[5 for stating/acknowledging the definition of the standard matrix, 5 for $T(e_1)$ calculation (as in \eqref{eq3}), 5 for $T(e_2)$ calculation (as in \eqref{eq4}), 5 for the correct matrix $M$ (as in \eqref{eq5}), 5 for all of the above]}
-\end{solution}
-
-\end{questions}
-
-
-\clearpage
-
-
-\section*{General Comments}
-The following are general observations from the responses collected.
-
-
-\begin{enumerate}
-	\item \begin{itemize}
-		
-		\item \uline{Know what objects you are dealing with}. It is important to note, in a definition, what the concept is as a mathematical object. A linear transformation, for example, is a \textit{map} from some space to another. The span of a collection of vectors is a \textit{set}. Knowing what objects you are dealing with will go a long way in your career in mathematics. This has caused a harsh grading at first (which prompted a regrading because we are still early on in the course).
-		
-		\item 
-	\end{itemize}
-	
 \end{enumerate}
 
 
