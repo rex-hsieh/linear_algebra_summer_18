@@ -1,0 +1,579 @@
+\documentclass{amsart}
+%\documentclass[11pt]{article}
+%\usepackage{amscls}
+\linespread{1}
+%\usepackage[letterpaper,top=1.2in,bottom=1in,right=1.03in,left=1.03in]{geometry}
+\usepackage[letterpaper,top=1.6in,bottom=1.3in,right=1.3in,left=1.3in]{geometry}
+\usepackage{titlesec}
+\usepackage{lipsum}
+
+%\usepackage{libertine}
+%\usepackage[lite,subscriptcorrection,nofontinfo,amsbb,eucal]{mtpro2}
+%slantedGreek
+
+\usepackage{hyphenat}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{mathrsfs}
+
+
+
+\usepackage{array, booktabs, caption}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage{hhline}% http://ctan.org/pkg/hhline
+\usepackage{makecell} 
+\usepackage{enumitem}
+\usepackage{bbm}
+\usepackage{soul}
+
+%\usepackage{mtpro2}
+
+
+%\usepackage[nottoc]{tocbibind}
+\usepackage[bottom]{footmisc}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{url}
+
+\usepackage[normalem]{ulem}
+\usepackage{relsize}
+\usepackage{commath}
+\usepackage{mathtools}
+\allowdisplaybreaks
+
+\title{\textsc{Assignment 2: Chapters 1 \& 2}}
+\thanks{Summer 2018. Instructor: Antonios-Alexandros Robotis.}
+\date{\today}
+
+
+\usepackage{float}
+
+\usepackage{color}
+\usepackage{commath}
+\usepackage{amsthm}
+
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{textcomp}
+
+\renewcommand\theadalign{lc}
+\renewcommand\theadfont{\bfseries}
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+
+\usepackage{nomencl}
+\makenomenclature
+
+\usepackage{accents}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{#1}}
+\makeatother
+
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+	\edef\arraystretch{#1}%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{*\c@MaxMatrixCols c}}
+\makeatother
+
+
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.5pt}
+\rhead{\textsc{Assignment 2}}
+\lhead{\textsc{Linear Algebra}}
+%\lhead{\textsc{}}
+\cfoot{\thepage}
+
+\usepackage{lmodern}
+
+\newtheoremstyle{mytheoremstyle} % name
+{\topsep}                    % Space above
+{\topsep}                    % Space below
+{}                   % Body font
+{}                           % Indent amount
+{\bfseries}                   % Theorem head font
+{.}                          % Punctuation after theorem head
+{.5em}                       % Space after theorem head
+{}  % Theorem head spec (can be left empty, meaning ‘normal’)
+
+
+%\theoremstyle{mytheoremstyle}
+%
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}%[section]
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{obs}[definition]{Observation}
+\newtheorem{example}[definition]{Example}
+\newtheorem{assumption}[definition]{Assumption}
+\newtheorem{properties}[definition]{Properties}
+\newtheorem{motivation}[definition]{Motivation}
+\newtheorem{derivation}[definition]{Derivation}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{fact}[definition]{Fact}
+
+\theoremstyle{definition}
+\newtheorem*{solution}{Solution}
+
+\usepackage{caption}
+\captionsetup[figure]{labelfont=sc}
+\setlist[enumerate]{font=\bfseries\sffamily}
+
+
+
+%\addto\captionsenglish{\renewcommand*{\proofname}{\scshape Proof.}}
+
+
+%\numberwithin{equation}{section}
+
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathcal{N}}
+\DeclareMathOperator{\bindist}{\mathsf{B}}
+\DeclareMathOperator{\DD}{D}
+\DeclareMathOperator{\betadist}{Beta}
+\DeclareMathOperator{\E}{\mathbf{E}}
+\DeclareMathOperator{\cov}{Cov}
+\DeclareMathOperator{\var}{Var}
+\DeclareMathOperator{\samplespace}{\mathcal{S}}
+\DeclareMathOperator{\suchthat}{\text{ s.t. }}
+\DeclareMathOperator{\summod}{\accentset{\circ}{+}}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\1}{\mathbbm{1}}
+\DeclareMathOperator{\LL}{\mathscr{L}}
+\DeclareMathOperator{\Imaginary}{Im}
+\DeclareMathOperator{\supp}{Supp}
+\DeclareMathOperator{\powerset}{\mathcal{P}}
+\DeclareMathOperator{\normP}{norm}
+\DeclareMathOperator{\BB}{\mathscr{B}}
+\DeclareMathOperator{\contf}{\mathcal{C}}
+\DeclareMathOperator{\riemannint}{\mathscr{R}}
+\DeclareMathOperator{\osc}{osc}
+\DeclareMathOperator{\sigmaalg}{\sigma-algebra}
+\DeclareMathOperator{\MM}{\mathcal{M}}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\D}{\dif}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\PP}{\mathbf{P}}
+\DeclareMathOperator{\CC}{\mathscr{C}}
+\DeclareMathOperator{\B}{\mathcal{B}}
+\DeclareMathOperator{\sgn}{sgn}
+
+\DeclareMathOperator{\col}{\mathsf{C}}
+\DeclareMathOperator{\nul}{\mathsf{N}}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+
+\newcommand{\Tau}{\mathcal{T}}
+
+%\newcommand{\vect}[1][2]{\LL(#1,#2)}
+\newcommand{\Lspace}[4]{\mathscr{L}^{#1}(#2,#3,#4)}
+\newcommand{\condset}[4]{\left\{ #1  : \: #2 #3 #4 \right\}}
+\newcommand{\ball}[2]{B(#1,#2)}
+\newcommand{\innerproduct}[2]{\left\langle #1,#2 \right\rangle}
+
+
+%\titleformat{\section}
+%{\centering\Large\normalfont\scshape}{\thesection .}{0.5em}{}
+%
+%\titleformat{\subsection}
+%{\centering\large\normalfont\scshape}{\thesubsection .}{0.5em}{}
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\begin{document}
+	\sloppy
+	\maketitle
+	
+	%In what follows, let
+	%\begin{itemize}[itemsep=0mm]
+	%	\item $V$ be an inner product space.
+	%\end{itemize}
+	
+	This document contains suggested solutions to a selection of \textit{representative} problems (which are graded) from the current homework assignment---one, or two, from each subsection of chapter one in the textbook. They do not include every last detail, but should give you enough guidance to complete each problem fully on your own. 
+	
+	Even though the rest of the homework assignment are checked for completion, the grader will make an attempt at pointing out glaring faults in arguments whenever they arise. As such, some general comments on the completion of this assignment are provided at the end. 
+	
+	Below are a few conventions are used throughout grading your assignments, along with some ground rules for grading:
+	
+	
+	\begin{enumerate}[itemsep=.75em]
+		
+%		\item Raw score is given /100, but normalised to /10 on NYUClasses. The raw score makes partial marks easier to give out.
+		
+		\item Up to 40 raw marks are given for completion of homework. The actual score given depends on the amount of assignment completed, and quality of the work attempted. This will be given in 5-mark increments. As a rough description for this raw score, the table below describes how this score will be assigned:
+		
+		\begin{center}
+			\begin{tabular}{c | p{9cm}}
+				\textbf{Mark(s)} & \multicolumn{1}{c}{\textbf{Description}} \\
+				\hline
+				0 & Did not complete anything in the assignment / did not hand it in. \\
+				\hline
+				10 & A lighthearted attempt at a few questions are made. \\
+				\hline
+				20 & Up to half of the questions have been attempted, with some effort put in. \\
+				\hline
+				30 & More than three-fourths of the questions have been attempted, all with considerable progress. \\
+				\hline
+				%			40 & Missing attempts on only a few questions in the assignment. \\
+				%			\hline
+				40 & Attempted every question assigned, and has made considerable progress in every question.
+			\end{tabular}
+		\end{center}
+		
+		%	\item When grading the questions indicated below, the following scale and description are considered:
+		%	
+		%	\begin{center}
+		%		\begin{tabular}{c | c}
+		%			\textbf{Mark(s)} & \textbf{Description} \\
+		%			\hline
+		%			0 & Did not complete anything to solve the problem. \\
+		%			2 & A mostly incorrect attempt has been made. \\
+		%			4 & A somewhat correct attempt has been made. \\
+		%			6 & One to a few mistakes has been made. \\
+		%			8 & One to two mistakes has been made, with wrong calculations or conclusions. \\
+		%			10 & Looks great!
+		%		\end{tabular}
+		%	\end{center}
+		%	
+		%	\bigskip
+		%	
+		%	\noindent Any odd-value scores are given at the discretion of the grader.
+		
+		\item Marks available and breakdown are indicated at the beginning of every question, inside square brackets. 
+		
+		\item Naming convention: in the following section, question indexed as $2.x.y$ should be read as ``question $y$ from chapter $2.x$ in Lay's textbook''.
+		
+		\item If you wish to dispute grading on question(s), please hand in your assignment to the instructor on the next homework submission day---with your comments/disputes written around the question(s).
+		
+	\end{enumerate}
+	
+	
+	
+	\clearpage
+	
+	\section*{Suggested Solutions}
+	
+	\bigskip
+	
+	\begin{enumerate}[itemsep = 2mm]
+		\item[1.9.33] \textit{[\textbf{6}; 1 for defining the bases of linear transformation, 1 for stating/acknowledging the definition of standard matrix, 2 for realising that $B e_j = j$-th column of $B$, 1 for correct calculations throughout and subsequent conclusion, 1 for having all of the above]}
+		
+		\begin{proof}
+			It is not difficult to notice that the matrix of linear transformation is dependent on the choice of basis, denoted $\B$. In this case, let us deal with the canonical (standard) bases. Take a linear transformation $T: \R^n \mapsto \R^m$. Let $(e_1, \dots, e_n)$ denote the canonical basis in $\R^n$, and $(e'_1,\dots,e'_m)$ denote the canonical basis in $\R^m$. Let $A$ denote the standard matrix of linear transformation defined as
+			\begin{align*}
+			A \coloneqq \begin{bmatrix}
+			| & | &  & | \\
+			T(e_1) & T(e_2) & \cdots & T(e_n) \\
+			| & | &  & | 
+			\end{bmatrix} \in \MM_{m \times n}
+			\end{align*}
+			where $\MM_{m \times n}$ denotes the set of $m \times n$ matrices. Suppose there exists another $m \times n$ matrix $B$ such that $T(x) = Bx$. It follows trivially that $j$-th column of $A = T(e_j) = B e_j = j$-th column of $B$. Hence, the matrix $A$ and $B$ share the same columns. This concludes the proof.
+		\end{proof}
+		
+		
+		
+		\item[2.1.16] \textit{[\textbf{10}; 2 for each part---1 for T/F, 1 for correct justification]}
+		
+		\begin{enumerate}
+			\item \textbf{False}. Check the dimensions of the resulting matrix/vector!
+			
+			\item \textbf{True}. Follows from definition of matrix multiplication.
+			
+			\item \textbf{False}. Matrix multiplication is not commutative. Take $A \in \MM_{5 \times 6}$, $B \in \MM_{6 \times 4}$, $C \in \MM_{4 \times 6}$. Then $(AB)C \in \MM_{5 \times 7}$, but $(AC)B$ is undefined. Even just with two matrices, such as $B$ and $C$ as defined here, $BC \neq CB$.
+			
+			\item \textbf{False}. $(AB)^\intercal = B^\intercal A^\intercal$.
+			
+			\item \textbf{True}. This is straightforward verification by playing around with the indices; note that for any matrix $A$, $A^{\intercal}_{ij} = A_{ji}$; by definition of matrix sum, for any two matrices $A$ and $B$ of same dimensions, $(A+B)^{\intercal}_{ij} = (A+B)_{ji}$. Fill in the rest of the details should you be interested.
+		\end{enumerate}
+		
+		
+		\item[2.2.21] \textit{[\textbf{4}; 1 for justifying the system $A\vec{x} = \vec{b}$ always has a solution if $A$ is invertible, 1 for correctly identifying the unique solution, 1 for explaining why the set of vectors is linearly independent, 1 for having all of the above]}
+		
+		\begin{proof}
+		For the first question, recall that if $A$ is invertible, then, for all $\vec{b}$ in the range, $A\vec{x} = \vec{b}$ always admits a unique solution (which comes from using the fact that $A^{-1}$ exists, so we can left multiply by $A^{-1}$ to get $A^{-1} A \vec{x} = A^{-1} \vec{b} \implies \vec{x} = A^{-1} \vec{b}$). Hence, in the case of $A \vec{x} = \vec{0}$, we have the unique solution $\vec{x} = A^{-1} \vec{0} = \vec{0}$. From an earlier proposition, we know that a set of vectors $\set{v_k}_{k=1}^{n}$ is linearly independent iff the matrix equation $A\vec{x} = \vec{0}$ (where the columns of $A$ are $\set{v_k}_{k=1}^{n}$) admits only the trivial solution. This concludes the proof.
+		\end{proof}
+		
+		
+		
+		\item[2.2.22] \textit{[\textbf{4}; 1 for an attempt at using the hint, 1 for justifying one of the equivalent conditions in Theorem 4, 1 for correct explanation, 1 for having all of the above]}
+		
+		\begin{proof}
+			For the second question, note that, by Theorem 5, for every $\vec{b} \in \R^n$, $A\vec{x} = \vec{b}$ always admits a unique solution. Per the hint, by Theorem 4, this is equivalent to columns of $A$ spanning $\R^n$.
+			
+			Alternatively, any invertible matrix $A \in \MM_{n \times n}$ is row equivalent to $I_n$ (identity matrix of size $n \times n$; if you struggle to understand this, think about the rank of any invertible matrix). Since $I_n$ has a pivot in every row, per the hint, by Theorem 4, this is equivalent to columns of $A$ spanning $\R^n$. This concludes the proof.
+		\end{proof}
+		
+		
+		
+		
+		\item[2.3.33 + 2.3.34] \textit{[\textbf{8}; 4 for each question. For each part, 1 for justifying the map is invertible, 1 for finding the inverse of the given matrix, 1 for stating \eqref{eq1} or \eqref{eq2} for respective questions, 1 for having all of the above. If one fails to justify that the map is invertible, even if the answer is correct, maximum of 1 is given for each question]}
+		
+		
+		\uline{For the first question}, denote the linear transformation as $T_1$. Note that $T_1 : \R^2 \mapsto \R^2$ can be represented by the vector function
+		\begin{align*}
+		T_1 \left( \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} \right) = \underbrace{ \begin{bmatrix} -5 & 9 \\ 4 & -7 \end{bmatrix} }_{\coloneqq A_1} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}
+		\end{align*}
+		It is a fact that a linear map is invertible iff it is bijective; it remains to check that a map is bijective. It is not difficult to see that
+		\begin{align*}
+		\begin{bmatrix} -5 & 9 \\ 4 & -7 \end{bmatrix} \leadsto \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+		\end{align*}
+		which implies it is one-to-one and onto by Theorem 12 in \S1.9. Hence, $T_1$ is bijective, therefore invertible (alternatively, an equivalent method is to check if the matrix representation of linear transformation $A_1$ is invertible, and justify this by a theorem in this section). Lastly, we know such inverse is given by $T_1^{-1} (x) = A_1^{-1} x$, where $x \in \R^2$. A simple calculation yields
+		\begin{align*}
+		A_1^{-1} = \frac{1}{35 -36} \begin{bmatrix} -7 & -9 \\ -4 & -5 \end{bmatrix} = \begin{bmatrix} 7 & 9 \\ 4 & 5 \end{bmatrix} 
+		\end{align*}
+		Hence,
+		\begin{align}
+		\label{eq1}
+		T_1^{-1} \left( \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} \right) = \begin{bmatrix} 7 & 9 \\ 4 & 5 \end{bmatrix}  \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 7 x_1 + 9 x_2 \\ 4 x_1 + 5x_2 \end{bmatrix}
+		\end{align}
+		
+		\uline{For the second question}, denote the linear transformation as $T_2$. Note that $T_2 : \R^2 \mapsto \R^2$ can be represented by the vector function
+		\begin{align*}
+		T_2 \left( \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} \right) = \underbrace{ \begin{bmatrix} 6 & -8 \\ -5 & 7 \end{bmatrix} }_{\coloneqq A_2} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}
+		\end{align*}
+		Note that because $\det (A_2) = 42 - (40) = 2 \neq 0$, $A_2$ is invertible. By an earlier theorem, $T_2$ is an invertible linear map. A quick calculation gives
+		\begin{align*}
+		A_2^{-1} = \frac{1}{42- 40} \begin{bmatrix} 7 & 8 \\ 5 & 6 \end{bmatrix} = \begin{bmatrix}[1.2] \frac{7}{2} & 4 \\ \frac{5}{2} & 3 \end{bmatrix} 
+		\end{align*}
+		Hence,
+		\begin{align}
+		\label{eq2}
+		T_2^{-1} \left( \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} \right) = \begin{bmatrix}[1.2] \frac{7}{2} & 4 \\ \frac{5}{2} & 3 \end{bmatrix}  \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix}[1.2] \frac{7}{2} x_1 + 4 x_2 \\ \frac{5}{2} x_1 + 3 x_2 \end{bmatrix}
+		\end{align}
+				
+		\item[2.8.22] \textit{[\textbf{10}; 2 for each part---1 for T/F, 1 for correct justification]}
+		
+		\begin{enumerate}
+			\item \textbf{False}. This is only one of the conditions required for $H \subset \R^n$ to be a subspace.
+			
+			\item \textbf{True}. The set of all linear combinations of a collection of vectors is the span of the collection of vectors; it is not hard to prove/convince yourself that this is indeed a vector space. In particular, it is a vector subspace of $\R^n$.
+			
+			\item \textbf{True}. If $A \in \MM_{m\times n}$, then the function $\Gamma(\vec{x}) = A\vec{x}$ represents the linear map $\Gamma : \R^n \mapsto \R^m$. By the nature of matrix/vector multiplication, $x$ is of size $n \times 1$. Hence, the nullspace is defined as
+			\begin{align*}
+			\nul(A) = \condset{\vec{x} \in \R^n}{Ax}{=}{\vec{0}_{\R^m}}
+			\end{align*}
+			where $\vec{x}_{\R^m}$ denotes the zero vector in $\R^m$. It is not difficult to verify that this is indeed a subspace of $\R^n$.
+			
+			\item \textbf{False}. The column space of $A$ can be the entire ambient space (of the range). As a counterexample, consider
+			\begin{align*}
+			\begin{bmatrix}
+			3 & 0 \\ 0 & 4
+			\end{bmatrix} \vec{x} = \begin{bmatrix}
+			1 \\ 0
+			\end{bmatrix}
+			\end{align*}
+			obviously, the columns of $A$ span $\R^2$. As such, $\begin{bmatrix}
+			1 \\ 1
+			\end{bmatrix} \in \col(A)$, but this is obviously not a solution to the matrix equation above.
+			
+			\item \textbf{False}. One must look at the corresponding (pivot) columns of $A$!
+		\end{enumerate}
+		
+		
+		\item[2.9.18] \textit{[\textbf{10}; 2 for each part---1 for T/F, 1 for correct justification]}
+		
+		\begin{enumerate}
+			\item \textbf{True}. This is not difficult to prove at all. For those interested, here is the proof:
+			
+			\bigskip
+			
+			\begin{proof}
+				Take any (finite) vector space $V$ with basis $\B \coloneqq \set{v_1,v_2,\dots,v_n}$, and any $x \in V$. By definition of $\B$, we can write $x = \sum_{k=1}^{n} a_k v_k$ for some set of scalars $a_k$. By way of contradiction, suppose this representation is not unique; then, $x = \sum_{k=1}^{n} b_k v_k$, for some different set of scalars $b_k$.  Then,
+				\begin{align*}
+					\sum_{k=1}^{n} a_k v_k - \sum_{k=1}^{n} b_k v_k &= \sum_{k=1}^{n} (a_k - b_k) v_k = x - x = 0 
+				\end{align*}
+				where $0$ is the zero vector in $V$. By definition of linear independence, $a_k - b_k = 0 $ for all $k=1,2,\dots,n$, implying $a_k = b_k$ for all $k$. Contradiction.
+			\end{proof}
+			
+			\item \textbf{True}. Such map is bijective, even if the vectors in $H$ themselves may have more than $p$ entries.
+			
+			\item \textbf{False}. For any matrix $A$, $\dim(\nul(A)) = $ number of free variables in the reduced form of $A$.
+			
+			\item \textbf{True}. This is the consequence of rank-nullity theorem.
+			
+			\item \textbf{True}. This is the consequence of the basis theorem.
+		\end{enumerate}
+		
+		
+		\item[3.1.39] \textit{[\textbf{4}; 2 for each part---1 for T/F, 1 for correct justification]}
+		
+		\begin{enumerate}
+			\item \textbf{True}. The statement is not great, but it is essentially how (repeated) cofactor expansion works.
+			
+			
+			\item \textbf{False}. The cofactor is given by $C_{ij} = (-1)^{i+j} \det (A_{ij})$, where $A_{ij}$ is the matrix $A$ with $i$-th row and $j$-th column removed.
+		\end{enumerate}
+		
+		\item[3.1.40]  \textit{[\textbf{4}; 2 for each part---1 for T/F, 1 for correct justification]}
+		
+		\begin{enumerate}
+			\item \textbf{False}. We can expand down any row or column and get same determinant.
+			
+			
+			\item \textbf{False}. The determinant of a triangular matrix is the product of the diagonal entries.
+		\end{enumerate}
+		
+		\clearpage
+		
+		\item[Extra Credit 1] The full proposition is as follows:
+		
+		\begin{proposition}
+			\label{prop1}
+			Let $A$ be any $m\times n$ matrix. Then the following hold:
+			\begin{enumerate}
+				\item The \textit{left multiplication} $E_{ij} A$ corresponds to swapping rows $i$ and $j$ actually swaps rows. 
+				\item The \textit{left multiplication} $E_{k (i)} A$ corresponds to multiplying row $i$ by $k \in \R \setminus \set{0}$.
+				\item The \textit{left multiplication} $E_{i + k (j)} A$ corresponds to multiplying row $j$ by $k \in \R$, and adding it onto row $i$.
+			\end{enumerate}
+			where the elementary matrices are defined as follows:
+			\begin{align*}
+			E_{ij} \coloneqq \begin{bmatrix} E_1 \\ \vdots \\ E_{i-1} \\ E_{j} \\ E_{i+1} \\ \vdots \\ E_{j-1} \\ E_i \\ E_{j+1} \\ \vdots \\ E_m \end{bmatrix}, \quad 
+			E_{k(i)} \coloneqq \begin{bmatrix} E_1 \\ \vdots \\ E_{i-1} \\ k E_{i} \\ E_{i+1} \\ \vdots \\ E_m \end{bmatrix}, \quad
+			E_{i + k(j)} \coloneqq \begin{bmatrix} E_1 \\ \vdots \\ E_{i-1} \\ E_{i} + k E_{j} \\ E_{i+1} \\ \vdots \\ E_{j-1} \\ E_j \\ E_{j+1} \\ \vdots \\ E_m \end{bmatrix}
+			\end{align*}
+			where all elementary matrices are of size $m \times m$.
+		\end{proposition}
+		
+		\begin{proof}
+			Each part can be proven by matrix multiplication. For simplicity, I omit writing out the details of the multiplications: they are all essentially summations of products.
+			\begin{enumerate}
+				\item Note that
+				\begin{align*}
+				E_{ij} A &= \begin{bmatrix} E_1 A  \\ \vdots \\ E_{i-1} A \\ E_{j} A \\ E_{i+1} A \\ \vdots \\ E_{j-1} A \\ E_i A \\ E_{j+1} A \\ \vdots \\ E_m A \end{bmatrix}
+				\end{align*}
+				and since $E_i = (0,0,\dots, 0, \underbrace{1}_{i\text{-th position}} ,0, \dots, 0)$, $E_i A $ returns the $i$-th row of $A$. \textit{Mutatis mutandis}, $E_j A$ returns $j$-th row of $A$. This corresponds to row swaps between rows $i$ and $j$.
+				
+				
+				\item Again, for any nonzero $k \in \R$, we have
+				\begin{align*}
+				E_{k(i)} A = \begin{bmatrix} E_1 A  \\ \vdots \\ E_{i-1} A \\ k E_{i} A \\ E_{i+1} A \\ \vdots \\ E_m A \end{bmatrix}
+				\end{align*}
+				every $j$-th entry is now the $j$-th row of $A$, with the exception of $i$: it is now premultiplied by the scalar $k$. For all $k \in \R \setminus \set{0}$, this operation is invertible: $E_{\frac{1}{k}(i)} E_{k(i)} A = A$.
+				
+				
+				\item By the distributive property of matrix multiplication, we have
+				\begin{align*}
+				E_{i + k(j)} A = \begin{bmatrix} E_1 A  \\ \vdots \\ E_{i-1} A \\ (E_{i} + k E_{j})A \\ E_{i+1} A \\ \vdots \\ E_{j-1} A \\ E_j A \\ E_{j+1} A \\ \vdots \\ E_m A \end{bmatrix}
+				= \begin{bmatrix} E_1 A  \\ \vdots \\ E_{i-1} A \\ E_{i}A + k E_{j}A \\ E_{i+1} A \\ \vdots \\ E_{j-1} A \\ E_j A \\ E_{j+1} A \\ \vdots \\ E_m A \end{bmatrix}
+				\end{align*}
+				from previous parts, we know $E_{i}A$ corresponds to row $i$ of matrix $A$, and $k E_{j}A$ to $k$ multiples of row $j$ of matrix $A$.
+			\end{enumerate}
+			Combining the three parts above concludes the proof.
+		\end{proof}
+		
+		
+		\item[Extra Credit 2] We prove the following theorem:
+		
+		\begin{theorem}[The Basis Theorem]
+			\label{thmbasis}
+			Let $H \subset \R^n$ be a nontrivial subspace of $\R^n$, with $\dim (H) = k$. Then, a collection of vectors $V \coloneqq \set{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k}$ is spanning iff it is linearly independent. Stated another way, the following are equivalent:
+			\begin{enumerate}
+				\item $V$ is a basis of $H$.
+				\item $V$ is linearly independent.
+				\item $V$ spans $H$.
+			\end{enumerate}
+		\end{theorem}
+	
+		\begin{proof}
+			By definition of a basis, (a) implies (b) and (c). To show (b) and (c) are equivalent, we will show (b) implies (a) and (c) implies (a).
+			
+			Assume (b). By basis reduction theorem, we can remove some $v_i$ to obtain a basis of $H$ (try to prove this proposition). However, every basis of $H$ must have length $k$, hence no vector needs to be removed from $V$. The set $V$ is already a basis of $H$.
+			
+			Assume (c). In any finite-dimensional vector space $V$, every linearly independent set of vectors can be extended to a basis of $V$ (try prove this proposition). $V$ can be extended as well. However, by the same argument, every basis of $H$ must have length $k$, hence no vector needs to be added. As such, $V$ os a basis of $H$.
+			
+			As such, the statements above are equivalent.
+		\end{proof}
+	
+		\begin{remark}
+			The point of this extra credit question is to demonstrate that when one verifies whether a set of vectors is a basis of some subspace or not, one either checks if it spans the subspace, or if it is linearly independent. 
+			
+			Also, the theorem holds when vector space $V$ is a finite-dimensional, which guarantees that the dimension of the subspace is finite. In other words, if $V$ is finite, and $H \subset V$, then $\dim(H) \leq \dim(V)$.
+		\end{remark}
+	\end{enumerate}
+	
+	
+	\clearpage
+	
+	
+\section*{General Comments}
+
+\noindent \textit{[Developing...]}
+
+The point of studying mathematics is to be able to come up with \textit{simple, nontrivial examples}, from which one can think about the fundamental principles underlying them. Some of these T/F questions help one in doing exactly that. Some of these proofs-type questions also test one's understanding of the fundamentals---including, but not limited to, definitions, basic propositions, some theorems and their consequences, and so on.
+
+Here are some general comments for each question (some of which familiar from the previous homework):
+
+\begin{enumerate}
+	\item[1.9.33]
+	
+	
+	
+	\item[2.1.16]
+	
+	
+	
+	\item[2.2.21]
+	
+	
+	
+	\item[2.2.22]
+	
+	
+	\item[2.3.33 + 2.3.34]
+	
+	
+	
+	\item[2.8.22]
+	
+	
+	
+	
+	\item[2.9.18]
+	
+	
+	
+	
+	\item[3.1.39]
+	
+	
+	
+	\item[3.1.40]
+	
+	
+	
+	\item[Extra Credit 1]
+	
+	
+	
+	
+	\item[Extra Credit 2]
+	
+\end{enumerate}
+
+
+	
+\end{document}
