@@ -1,0 +1,417 @@
+\documentclass[answers,11pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[letterpaper,top=1.4in,bottom=1.2in,right=1.3in,left=1.3in]{geometry}
+
+\usepackage{amsmath,amssymb}
+%\usepackage{commath}
+%\usepackage{mathtools}
+%\usepackage{multicol}
+
+\newcommand{\class}{Linear Algebra}
+\newcommand{\term}{Summer 2018}
+\newcommand{\examnum}{Quiz 3: Suggested Solutions}
+\newcommand{\examdate}{07.24.18}
+\newcommand{\timelimit}{20 Minutes}
+
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+\usepackage{hyphenat}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{mathrsfs}
+
+\usepackage{array, booktabs, caption}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage{hhline}% http://ctan.org/pkg/hhline
+\usepackage{makecell} 
+\usepackage{enumitem}
+\usepackage{bbm}
+\usepackage{soul}
+
+%\usepackage{mtpro2}
+%\usepackage[nottoc]{tocbibind}
+
+\usepackage[bottom]{footmisc}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{url}
+
+\usepackage[normalem]{ulem}
+\usepackage{relsize}
+\usepackage{commath}
+\usepackage{mathtools}
+\allowdisplaybreaks
+
+\usepackage{float}
+
+\usepackage{color}
+\usepackage{commath}
+\usepackage{amsthm}
+
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{textcomp}
+
+\renewcommand\theadalign{lc}
+\renewcommand\theadfont{\bfseries}
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+
+\usepackage{nomencl}
+\makenomenclature
+
+\usepackage{accents}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{#1}}
+\makeatother
+
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+	\edef\arraystretch{#1}%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{*\c@MaxMatrixCols c}}
+\makeatother
+
+
+\newtheoremstyle{mytheoremstyle} % name
+{\topsep}                    % Space above
+{\topsep}                    % Space below
+{}                   % Body font
+{}                           % Indent amount
+{\bfseries}                   % Theorem head font
+{.}                          % Punctuation after theorem head
+{.5em}                       % Space after theorem head
+{}  % Theorem head spec (can be left empty, meaning ‘normal’)
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition} %[section]
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{obs}[definition]{Observation}
+\newtheorem{example}[definition]{Example}
+\newtheorem{assumption}[definition]{Assumption}
+\newtheorem{properties}[definition]{Properties}
+\newtheorem{motivation}[definition]{Motivation}
+\newtheorem{derivation}[definition]{Derivation}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{fact}[definition]{Fact}
+
+\usepackage{caption}
+\captionsetup[figure]{labelfont=sc}
+\setlist[enumerate]{font=\bfseries\sffamily}
+
+
+
+%\addto\captionsenglish{\renewcommand*{\proofname}{\scshape Proof.}}
+
+
+%\numberwithin{equation}{section}
+
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathcal{N}}
+\DeclareMathOperator{\bindist}{\mathsf{B}}
+\DeclareMathOperator{\DD}{D}
+\DeclareMathOperator{\betadist}{Beta}
+\DeclareMathOperator{\E}{\mathbf{E}}
+\DeclareMathOperator{\cov}{Cov}
+\DeclareMathOperator{\var}{Var}
+\DeclareMathOperator{\samplespace}{\mathcal{S}}
+\DeclareMathOperator{\suchthat}{\text{ s.t. }}
+\DeclareMathOperator{\summod}{\accentset{\circ}{+}}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\1}{\mathbbm{1}}
+\DeclareMathOperator{\LL}{\mathscr{L}}
+\DeclareMathOperator{\Imaginary}{Im}
+\DeclareMathOperator{\supp}{Supp}
+\DeclareMathOperator{\powerset}{\mathcal{P}}
+\DeclareMathOperator{\normP}{norm}
+\DeclareMathOperator{\BB}{\mathcal{B}}
+\DeclareMathOperator{\contf}{\mathcal{C}}
+\DeclareMathOperator{\riemannint}{\mathscr{R}}
+\DeclareMathOperator{\osc}{osc}
+\DeclareMathOperator{\sigmaalg}{\sigma-algebra}
+\DeclareMathOperator{\MM}{\mathscr{M}}
+\DeclareMathOperator{\M}{\mathcal{M}}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\D}{\dif}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\PP}{\mathbf{P}}
+\DeclareMathOperator{\CC}{\mathscr{C}}
+\DeclareMathOperator{\sgn}{sgn}
+
+\DeclareMathOperator{\col}{Col}
+\DeclareMathOperator{\nul}{Null}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+
+\newcommand{\Tau}{\mathcal{T}}
+\newcommand{\zerov}{\mathbf{0}}
+
+\newcommand{\uu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+
+%\newcommand{\vect}[1][2]{\LL(#1,#2)}
+\newcommand{\Lspace}[4]{\mathscr{L}^{#1}(#2,#3,#4)}
+\newcommand{\condset}[4]{\left\{ #1  : \: #2 #3 #4 \right\}}
+\newcommand{\ball}[2]{B(#1,#2)}
+\newcommand{\innerproduct}[2]{\left\langle #1,#2 \right\rangle}
+\newcommand{\polyn}[2]{\mathcal{P}_{#1}(#2)}
+
+%\titleformat{\section}
+%{\centering\Large\normalfont\scshape}{\thesection .}{0.5em}{}
+%
+%\titleformat{\subsection}
+%{\centering\large\normalfont\scshape}{\thesubsection .}{0.5em}{}
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name:} & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} &&\\
+\textbf{\examdate} &&\\
+\textbf{Time Limit: \timelimit} 
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+
+This quiz contains 2 sides (including this cover page) and 4 questions.\\
+Total of points is \numpoints.
+
+
+\begin{center}
+Grade Table (for grader use only)\\
+\addpoints
+\gradetable[v][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+\question[30] Define
+\noaddpoints
+\begin{parts}
+\part[15] a subspace $H$ of a real vector space $V$.
+
+\begin{solution}
+	$H \subset V$ is a vector subspace if the following conditions hold:
+	\begin{enumerate}[label=\alph*)]
+		\item $\zerov_V \in H$ (the zero vector of $V$ is in $H$)
+		\item $\forall \uu,\vv \in H$, $\uu + \vv \in H$ (closure under addition)
+		\item $\forall \uu \in H$ and $c \in \R$ (or, a scalar), $c\uu \in H$ (closure under scalar multiplication)
+	\end{enumerate}
+
+	\textit{[3 for ``subset'', 3 for a), 3 for b), 3 for c), 3 for having all of the above. If the qualifiers are missing in each of a) through c), a maximum of 1 is given for the part]}
+\end{solution}
+
+\part[15] a linear transformation $T:V\to W$, where $V$ and $W$ are real vector spaces. 
+
+\begin{solution}
+	A linear transformation is a map between two vector spaces, $V$ and $W$, that satisfies the following properties: $\forall \uu,\vv \in V$ and $c \in \R$ (or, a scalar),
+	\begin{enumerate}[label=\alph*)]
+		\item $T(\uu+\vv) = T(\uu)+T(\vv)$ (additivity)
+		\item $T(c\uu) = cT(\uu)$ (homogeneity)
+	\end{enumerate}
+	To each linear transformation we can associate a matrix representation.
+	
+	\textit{[4 for ``map'' or ``matrix representation'', 4 for a), 4 for b), 3 for having all of the above. If the qualifiers are missing for each of a) and b), then a maximum of 2 is given for each part]}
+\end{solution}
+
+
+\end{parts}
+\addpoints
+
+\question[20] Give \textbf{two} examples of $\mathbb{R}$-vector spaces, besides $\mathbb{R}^n$ for $n\in \mathbb{N}$. You do not need to prove that these are vector spaces, but be sure to describe the sets and the addition and scaling operations on them.
+\addpoints
+
+\begin{solution}
+	Some (interesting) examples of $\R$-vector spaces are as follows:
+	\begin{itemize}
+		\item The set of polynomials of degree $\leq n$: ie.
+		\begin{align*}
+			\polyn{n}{\R} \coloneqq \condset{a_0 + a_1 x + a_2 x^2 + \dots + a_n x^n}{ \set{a_i}_{i=0}^{n} \in \R}{ \text{ and }}{n \in \N}
+ 		\end{align*}
+ 		where the operations addition and scalar multiplication are defined as, for all $p,q \in \polyn{n}{\R}$ and $\lambda \in \R$,
+ 		\begin{align*}
+ 		(p+q)(x) &= p(x) + q(x) \\
+ 		(\lambda p)(x) &= \lambda p(x)
+ 		\end{align*}
+ 		
+ 		\item The set of all real-valued functions: ie.
+ 		\begin{align*}
+ 			V \coloneqq \condset{f}{f}{:}{\R \mapsto \R}
+ 		\end{align*}
+ 		under the same addition and scalar multiplication definitions as above.
+ 		
+ 		
+ 		\item The set of real-valued functions that are solutions to a differential equation: ie.
+ 		\begin{align*}
+ 		W \coloneqq \condset{f: \R \mapsto \R}{\dpd[2]{f}{x}+f}{=}{0}
+ 		\end{align*}
+ 		under the same addition and scalar multiplication definitions as above. Because differentiation is a linear map, ie. 
+ 		\begin{align*}
+ 		 \dpd[2]{(f+g)}{x} = \dpd[2]{f}{x} + \dpd[2]{g}{x}
+ 		\end{align*}
+ 		linearity holds. Homogeneity can be argued in a similar way.
+ 		
+ 		\item The set of real-valued continuous functions: ie.
+ 		\begin{align*}
+ 		\mathcal{W} \coloneqq \condset{f \in \contf}{f}{:}{\R \mapsto \R}
+ 		\end{align*}
+	\end{itemize}
+
+	\textbf{N.B.} As Alekos pointed out, if you provided examples of subspaces of $\R^n$, you will receive points, even though this is \textit{not} what the question is asking.
+	
+	\textit{[4 for correct first example, 6 for correct descriptions of the first set and the operations associated, 4 for correct second example, 6 for correct descriptions of the second set and the operations associated, 5 for having all of the above]}
+\end{solution}
+
+
+\question[25] Decide whether or not 
+\begin{equation*}
+\BB \coloneqq \left\{
+\begin{bmatrix}
+1\\
+0\\
+-2
+\end{bmatrix}, 
+\begin{bmatrix}
+3\\
+2\\
+-4
+\end{bmatrix}, 
+\begin{bmatrix}
+-3\\
+-5\\
+1
+\end{bmatrix}
+\right\}
+\end{equation*}
+is a basis for $\mathbb{R}^3$. Show all of your work.
+\addpoints
+
+\begin{solution}
+	Recall a basis is, by definition, a set of vectors that are linearly independent and spanning (the ambient space). From a few results from earlier, we know that asking if vectors in $\BB$ are linearly independent is equivalent to checking if $A\vec{x} = \vec{0}$ admits only the trivial solution, where 
+	\begin{align*}
+	A = \begin{bmatrix}
+	1& 3 & -3\\
+	0& 2 & -5 \\
+	-2 & -4 &1
+	\end{bmatrix}
+	\end{align*}
+	or, equivalently, if $\nul(A) = \{ \vec{0} \}$. So we need to see if the nullspace is trivial or not.
+	
+	A simple row reduction exercise reveals
+	\begin{align*}
+	\begin{bmatrix}
+	1& 3 & -3\\
+	0& 2 & -5 \\
+	-2 & -4 &1
+	\end{bmatrix} & \leadsto \begin{bmatrix}
+	1& 3 & -3\\
+	0& 2 & -5 \\
+	0 & 2 & -5
+	\end{bmatrix} \leadsto \begin{bmatrix}
+	1& 3 & -3\\
+	0& 2 & -5 \\
+	0 & 0 & 0
+	\end{bmatrix}
+	\end{align*}
+	And, as the number of column pivots in RREF of $A$ is the dimension of the column space, we have, by rank-nullity,
+	\begin{align*}
+	3 = 2 + \dim (\nul(A)) \implies \dim(\nul(A)) = 1
+	\end{align*}
+	which is obviously not trivial. In fact, one can explicitly solve for the nullspace, and get
+	\begin{align*}
+	\nul(A) = \condset{z \begin{bmatrix}[1.2]
+		-\frac{9}{2} \\ \frac{5}{2} \\ 1
+		\end{bmatrix}}{z}{\in}{\R}
+	\end{align*}
+	
+	An alternative is to calculate the determinant and see that it is zero, hence the matrix $A$ (as defined above) is not invertible. As such, the columns are not linearly independent, hence the nullspace has dimension greater than 0.
+	
+	\textit{[5 for stating (in some way) the definition of a basis, 5 for an attempt at row reduction or determinant calculation or equivalent method, 5 for correct calculations throughout, 5 for correct explanation(s), 5 for having all of the above]}
+\end{solution}
+
+
+\question[25] For which values of $a,b\in \mathbb{R}$ is the map $T:\mathbb{R}\to \mathbb{R}$ given by $T(x)=ax+b$ a linear transformation.
+
+\begin{solution}
+	In order for $T$ to be a linear transformation, it must satisfy both additivity and homogeneity, ie.
+	\begin{itemize}
+		\item $T(x+y) = T(x) + T(y)$ for all $x,y \in \R$
+		\item $T(\lambda x) = \lambda T(x)$ for all $x, \lambda \in \R$ (where $\lambda$ is some fixed constant)
+	\end{itemize}
+	Note that $T(x+y) = a(x+y)+b$ and $T(\lambda x) = a\lambda x + b$, whereas $T(x)+T(y) = a(x+y) +2b$ and $\lambda T(x) = a \lambda x + \lambda b$. Combining the expressions give rise to $2b = b$ and $\lambda b = b$. Since $\lambda $ can be any fixed constant, we conclude that the only possible solution is $b = 0$.
+	
+	Hence, for all $a \in \R$ and $b=0$, $T(x)$ is a linear transformation.
+	
+	The map, as defined in the question, is called an \textit{affine map}.
+	
+	\textit{[5 for attempting to use the definition of linear transformation, 5 for correctly stating the necessary conditions for $T$ to be a linear transformation, 5 for correct calculations, 1 for an attempt of any kind at stating $a$ and $b$, 4 for correct values of $a$ and $b$, 5 for having all of the above]}
+\end{solution}
+
+
+
+\end{questions}
+
+
+\clearpage
+
+
+\section*{General Comments}
+
+\textit{[Developing...]}
+
+
+The following are general observations from the responses collected.
+
+
+
+\begin{enumerate}
+	\item 
+	
+	
+	\item 
+	
+	
+	\item 
+	
+	
+	
+	\item  
+\end{enumerate}
+
+
+
+
+\end{document}
+

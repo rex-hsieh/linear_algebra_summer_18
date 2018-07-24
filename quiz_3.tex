@@ -1,0 +1,107 @@
+\documentclass[12pt]{exam}
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+
+\newcommand{\class}{Linear Algebra}
+\newcommand{\term}{Summer 2018}
+\newcommand{\examnum}{Quiz 3}
+\newcommand{\examdate}{07.24.18}
+\newcommand{\timelimit}{20 Minutes}
+\DeclareMathOperator{\col}{Col}
+\DeclareMathOperator{\nul}{Null}
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name:} & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} &&\\
+\textbf{\examdate} &&\\
+\textbf{Time Limit: \timelimit} 
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+
+This quiz contains 2 sides (including this cover page) and 4 questions.\\
+Total of points is \numpoints.
+
+
+\begin{center}
+Grade Table (for grader use only)\\
+\addpoints
+\gradetable[v][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+\question[30] Let $A$ denote an $m\times n$ matrix.
+\noaddpoints
+\begin{parts}
+\part[15] Define a subspace $H$ of a real vector space $V$.  \\\\
+\\\\
+\part[15] Define a linear transformation $T:V\to W$, where $V$ and $W$ are real vector spaces. \\\\
+\\\\
+\end{parts}
+\addpoints
+
+\question[20] Give \textbf{two} examples of $\mathbb{R}-$vector spaces, besides $\mathbb{R}^n$ for $n\in \mathbb{N}$. You do not need to prove that these are vector spaces, but be sure to describe the sets and the addition and scaling operations on them.
+\addpoints\\\\
+\\\\
+\\\\
+\\\\
+\\\\
+\\\\
+\\\\
+\\\\
+\\\\
+
+\question[25] Decide whether or not 
+\begin{equation*}
+\left\{
+\begin{bmatrix}
+1\\
+0\\
+-2
+\end{bmatrix}, 
+\begin{bmatrix}
+3\\
+2\\
+-4
+\end{bmatrix}, 
+\begin{bmatrix}
+-3\\
+-5\\
+1
+\end{bmatrix}
+\right\}
+\end{equation*}
+is a basis for $\mathbb{R}^3$. Show all of your work.
+\addpoints
+\\\\
+\\\\
+\\\\
+\\\\
+\\\\
+\\\\
+\\\\
+
+
+\question[25] For which values of $a,b\in \mathbb{R}$ is the map $T:\mathbb{R}\to \mathbb{R}$ given by $T(x)=ax+b$ a linear transformation.
+
+
+
+\end{questions}
+
+\end{document}
+
