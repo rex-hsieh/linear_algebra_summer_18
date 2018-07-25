@@ -117,6 +117,7 @@
 \usepackage{caption}
 \captionsetup[figure]{labelfont=sc}
 \setlist[enumerate]{font=\bfseries\sffamily}
+\usepackage{centernot}
 
 
 
@@ -129,6 +130,7 @@
 \DeclareMathOperator{\Q}{\mathbb{Q}}
 \DeclareMathOperator{\R}{\mathbb{R}}
 \DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\Com}{\mathbb{C}}
 \DeclareMathOperator{\NN}{\mathcal{N}}
 \DeclareMathOperator{\bindist}{\mathsf{B}}
 \DeclareMathOperator{\DD}{D}
@@ -389,25 +391,55 @@ is a basis for $\mathbb{R}^3$. Show all of your work.
 
 \section*{General Comments}
 
-\textit{[Developing...]}
-
 
 The following are general observations from the responses collected.
 
 
 
 \begin{enumerate}
-	\item 
+	\item \begin{itemize}
+		\item Note that the zero vector of $V$ is in $H$! It's not any zero vector.
+		\item Remember the qualifiers when you're stating the conditions. If they are not present, the objects written down are just symbols.
+		\item Linear transformation is a map/function; answers such as ``rule'' or ``assignment'' (or some equivalent descriptions) are accepted this time.
+	\end{itemize}
 	
 	
-	\item 
+	\item \begin{itemize}
+		\item Understand what is being asked. The question asks for examples of vector spaces defined over the field $\R$. By definition, it asks for spaces whose elements are in $\R$, with addition and scalar multiplication being closed in $\R$. Sets of functions, polynomials, real sequences, and so on, are all examples of vector spaces \uline{once the correct operations have been specified}.
+		
+		\item Think if an example is actually a vector space. A few wrote the upper plane in $\R^2$, defined
+		\begin{align*}
+		\mathcal{U} \coloneqq \condset{ \begin{bmatrix}
+			x \\ y
+			\end{bmatrix}}{x,y}{\geq}{0} \subset \R^2
+		\end{align*}
+		but it is obvious that $-c \notin \mathcal{U}$, where $c \in \mathcal{U}$.
+		
+		\item My mistake: $\mathbb{C}$ is a vector space over $\R$, though it was not obvious (at least, to me) at first glance why this should be the case. It was not clear to me why the field $\Com$ defines a vector space over another field $\R$. After some thinking, it is not hard to see that $\mathbb{C}$ is a two-dimensional vector space over $\R$, under the ``usual'' operations:
+		\begin{align*}
+		&\fullfunction{+}{\Com \times \Com}{\Com}{(x,y)}{x+y \coloneqq (a+c,b+d)} \\
+		&\fullfunction{\cdot}{\R \times \Com}{\Com}{(\alpha,x)}{\alpha x \coloneqq (\alpha a, \alpha b)}
+		\end{align*} 
+		and defining these correctly is important. Furthermore, because we know that $\Com \cong \R^2$, it is natural (sometimes, anyways) to think of them as the ``same'' sets, metric spaces, and groups under addition.
+		
+		
+	\end{itemize}
 	
 	
-	\item 
+	\item Justify your reasoning fully. For those who invoked IMT in some way, I was lenient. But, a large part about learning mathematics is about learning how to argue an idea fully.
 	
 	
 	
-	\item  
+	\item $T(0) = 0 \centernot\implies T$ is a linear transformation (not necessarily)! Take
+	\begin{align*}
+	T(x,y) = \left( \frac{x}{2}, \frac{xy}{4} \right), \qquad \forall (x,y) \in \R^2
+	\end{align*}
+	then take $(1,0)$ and $(1,1)$. Then,
+	\begin{align*}
+	T((2,1)) &= \left( 1, \frac{1}{2} \right) \\
+	T((1,0)) + T((1,1)) &= \left( \frac{1}{2}, 0 \right) + \left( \frac{1}{2}, \frac{1}{4} \right) = \left( 1, \frac{1}{4} \right)
+	\end{align*}
+	but obviously $T((0,0)) = 0$.
 \end{enumerate}
 
 
