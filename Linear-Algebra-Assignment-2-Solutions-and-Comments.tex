@@ -431,7 +431,7 @@
 		\item[3.1.40]  \textit{[\textbf{4}; 2 for each part---1 for T/F, 1 for correct justification]}
 		
 		\begin{enumerate}
-			\item \textbf{False}. We can expand down any row or column and get same determinant.
+			\item \textbf{False}. We can expand down any row or column and get same \textit{determinant}. In other words, the cofactor expansions of $\det(A)$ down a row and down a column are the same.
 			
 			
 			\item \textbf{False}. The determinant of a triangular matrix is the product of the diagonal entries.
@@ -493,8 +493,8 @@
 			Let $H \subset \R^n$ be a nontrivial subspace of $\R^n$, with $\dim (H) = k$. Then, a collection of vectors $V \coloneqq \set{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k}$ is spanning iff it is linearly independent. Stated another way, the following are equivalent:
 			\begin{enumerate}
 				\item $V$ is a basis of $H$.
-				\item $V$ is linearly independent.
-				\item $V$ spans $H$.
+				\item $V$ is a maximal linearly independent set.
+				\item $V$ is a minimal spanning set of $H$.
 			\end{enumerate}
 		\end{theorem}
 	
@@ -507,6 +507,46 @@
 			
 			As such, the statements above are equivalent.
 		\end{proof}
+	
+	
+		\begin{proof}[Alternative proof (from first principles)]
+		First, we prove a useful lemma.
+		\begin{lemma}
+			\label{lem1}
+			Let $H\subseteq \mathbb{R}^n$ be a subspace of dimension $k$. If $W\subseteq H$ is a $k$-dimensional subspace of $H$, then $W=H$.
+		\end{lemma}
+		
+		\begin{proof}
+		Fix a basis $\{\vec{w}_1,\ldots,\vec{w}_k\}$ for $W$. We know that $\Span(\vec{w}_1,\ldots, \vec{w}_k)\subseteq H$ because $H$ is closed under addition and scaling. So, if we suppose $\Span(\vec{w}_1,\ldots, \vec{w}_k)=W\ne H$, it must be the case that there is some vector $\vec{w}\in H$ such that 
+		\begin{equation*}
+		a_1\vec{w}_1+\cdots +a_k\vec{w}_k=\vec{w}
+		\end{equation*} 
+		has no solution for $a_1,\ldots, a_k\in \mathbb{R}$. If this is the case, then one can never write 
+		\begin{equation*}
+		a_1\vec{w}_1+\cdots+a_k\vec{w}_k+a_{k+1}\vec{w}= \vec{0}
+		\end{equation*}
+		unless all of the $a_i$ are $0$. So, $\{\vec{w}_1,\ldots, \vec{w}_k, \vec{w}\}$ is linearly independent in $H$, which implies that 
+		\begin{equation*}
+		\dim(H)\ge k+1>k=\dim(H).
+		\end{equation*}
+		This is a contradiction. So, no such $\vec{w}\in H$ can exist. That is, $\Span(\vec{w}_1,\ldots, \vec{w}_k)=H$. Thus, $W=H$.
+		\end{proof}
+		
+		Back to the task at hand. Take $\{ \vec{v}_1,\ldots, \vec{v}_k\}\subseteq H$ a linearly independent set. Then, if $A=[\vec{v}_1\cdots \vec{v}_k]$, the Rank-Nullity Theorem tells us 
+		\begin{align*}
+		k&=\dim\col(A)+\dim\nul(A)\\
+		&=\dim\col(A)+0
+		\end{align*}
+		whence $k=\dim\col(A).$ So, $\col(A)=H$. So, $\Span(\vec{v}_1,\ldots, \vec{v}_k)=H$, by \lemref{lem1}. This proves the first statement.
+		
+		For the second statement, suppose that $\{\vec{v}_1,\ldots, \vec{v}_k\}$ is a spanning set for $H$, so that $\Span(\vec{v}_1,\ldots, \vec{v}_k)=H$. Then, consider the matrix $A$ as before. We know that $\dim\col(A)=k$. So, by the Rank-Nullity Theorem:
+		\begin{align*}
+		k&=\dim\col(A)+\dim\nul(A)\\
+		&=k+\dim\nul(A)
+		\end{align*}
+		from which it follows that $\dim\nul(A)=0$. So, $\nul(A)=\{\vec{0}\}$. So, there are no nontrivial linear combinations of $\vec{v}_1,\ldots, \vec{v}_k$, implying the set of vectors is linearly independent.
+		\end{proof}
+		
 	
 		\begin{remark}
 			The point of this extra credit question is to demonstrate that when one verifies whether a set of vectors is a basis of some subspace or not, one either checks if it spans the subspace, or if it is linearly independent. 
@@ -528,49 +568,75 @@ The point of studying mathematics is to be able to come up with \textit{simple, 
 Here are some general comments for each question (some of which familiar from the previous homework):
 
 \begin{enumerate}
-	\item[1.9.33]
+	\item[1.9.33] Understand what the question is asking you to prove! If one wants to prove $A = B$, where $A,B$ are both matrices, then we must either show rows or columns of these matrices are equal. It boils down to noticing that if such a function representation $T(x) = Bx$ exists (where $x$ is a vector), then $T(e_i)$ is simply the $i$-th column of $B$.
 	
 	
 	
-	\item[2.1.16]
+	\item[2.1.16] Give explicit counterexamples for part (c), please.
 	
 	
 	
-	\item[2.2.21]
+	\item[2.2.21] It is a fact that invertible matrices are row equivalent (or, can be row reduced) to the identity matrix of the same size; how does that relate to linear independence, though? One must argue that this implies the matrix has the same number of pivots as the number of columns (ie. full column rank), and by rank-nullity, $\dim(\nul(A)) = 0$ as the result.
 	
 	
 	
-	\item[2.2.22]
+	\item[2.2.22] I was far more lenient on this than I was on the previous question. In the future, state \textit{every} theorem/fact you've used in the process of answering these questions.
 	
 	
-	\item[2.3.33 + 2.3.34]
-	
-	
-	
-	\item[2.8.22]
+	\item[2.3.33 + 2.3.34] For $2 \times 2$ matrices, it is sometimes obvious to tell if a matrix is invertible or not---but that does not mean we shouldn't check it is. In fact, it is always essential to justify why a certain operation can be performed on a mathematical object. Inversion is one of those operations whose applicability needs to be verified, whether it'd be matrices, functions, operators, sets (preimages), and so on. Hence, one should \textit{always check} if a matrix is invertible or not before actually trying to invert them.
 	
 	
 	
+	\item[2.8.22] \begin{itemize}
+		\item For part (c): when $n = m$, the distinction of vectors is not necessary; however, in general, when $n \neq m$, one needs to be \textit{very} careful about the dimensions of the objects.
+		
+		\item For part (d): please provide a counterexample.
+		
+		\item For part (e): row operations generally change the column space. An example is the following matrix:
+		\begin{align*}
+		B = \begin{bmatrix}
+		1 & 0 & 3 \\ 3 & 1 & 1 \\ 4 & 1 & 4
+		\end{bmatrix}
+		\end{align*}
+		which row reduces to 
+		\begin{align*}
+		B \leadsto U = \begin{bmatrix}
+		1 & 0 & 3 \\ 3 & 1 & 1 \\ 0 & 1 & -1
+		\end{bmatrix}
+		\end{align*}
+		where $\Span(\text{columns of } U) = \condset{\begin{bmatrix}
+			x \\ y \\ 0
+			\end{bmatrix}}{x,y}{\in}{\R} \neq \Span(\text{columns of } B)$!
+	\end{itemize}
 	
-	\item[2.9.18]
+	
+	
+	
+	\item[2.9.18] \begin{itemize}
+		\item For those who attempted part (a) by proving the uniqueness of linear combination of basis vectors, the proofs are mostly correct! Wonderful job to those who proved it correctly, and to those who did not attempt, try and see if you can replicate the proof as detailed above.
+		
+		\item For part (b): the bijection property is extremely important to note. Think back to calculus to find out why bijection is such an important property.
+		
+		\item For part (d): the statement is not true by definition. In fact, it is a special case of the dimension theorem for linear transformation, that for any linear operator $T:V \mapsto W$ (where $V$ and $W$ are vector spaces), $\dim(\ker(T)) + \dim(\im(T)) = \dim(V)$.
+	\end{itemize}
+	
+	
+	\item[3.1.39] All good!
+	
+	
+	
+	\item[3.1.40] Aside from the statement of part (a) in the question (which, understandably, caused some confusion), this question is quite well done!
+	
+	
+	
+	\item[Extra Credit 1] Giving an example does not constitute a proof. Also, verify the matrix multiplications above if you don't understand how they are derived.
 	
 	
 	
 	
-	\item[3.1.39]
+	\item[Extra Credit 2] Finding a set of vectors whose span has the same dimension as $H$ does not guarantee that the span is the same as $H$! With the aid of \lemref{lem1}, one can conclude this (and the proof is deceptively elegant). For those who stated and proved \lemref{lem1} implicitly (of which there were two, or three), the effort is much appreciated. For those who didn't understand the distinction, please revisit \lemref{lem1} again.
 	
-	
-	
-	\item[3.1.40]
-	
-	
-	
-	\item[Extra Credit 1]
-	
-	
-	
-	
-	\item[Extra Credit 2]
+	In addition, in the ``logically equivalent'' formation in \thmref{thmbasis}, the terms ``maximal'' and ``minimal'' are used while acknowledging that the sets have a partial ordering. Do not worry about this if you have never done set theory properly before.
 	
 \end{enumerate}
 
