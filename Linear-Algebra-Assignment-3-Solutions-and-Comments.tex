@@ -1,0 +1,651 @@
+\documentclass{amsart}
+%\documentclass[11pt]{article}
+%\usepackage{amscls}
+\linespread{1}
+%\usepackage[letterpaper,top=1.2in,bottom=1in,right=1.03in,left=1.03in]{geometry}
+\usepackage[letterpaper,top=1.6in,bottom=1.3in,right=1.3in,left=1.3in]{geometry}
+\usepackage{titlesec}
+\usepackage{lipsum}
+
+%\usepackage{libertine}
+%\usepackage[lite,subscriptcorrection,nofontinfo,amsbb,eucal]{mtpro2}
+%slantedGreek
+
+\usepackage{hyphenat}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{mathrsfs}
+
+
+
+\usepackage{array, booktabs, caption}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage{hhline}% http://ctan.org/pkg/hhline
+\usepackage{makecell} 
+\usepackage{enumitem}
+\usepackage{bbm}
+\usepackage{soul}
+
+%\usepackage{mtpro2}
+
+
+%\usepackage[nottoc]{tocbibind}
+\usepackage[bottom]{footmisc}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{url}
+
+\usepackage[normalem]{ulem}
+\usepackage{relsize}
+\usepackage{commath}
+\usepackage{mathtools}
+\allowdisplaybreaks
+
+\title{\textsc{Assignment 3: Chapters 3 \& 4}}
+\thanks{Summer 2018. Instructor: Antonios-Alexandros Robotis.}
+\date{\today}
+
+
+\usepackage{float}
+
+\usepackage{color}
+\usepackage{commath}
+\usepackage{amsthm}
+
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{textcomp}
+
+\renewcommand\theadalign{lc}
+\renewcommand\theadfont{\bfseries}
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+
+\usepackage{nomencl}
+\makenomenclature
+
+\usepackage{accents}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{#1}}
+\makeatother
+
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+	\edef\arraystretch{#1}%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{*\c@MaxMatrixCols c}}
+\makeatother
+
+
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.5pt}
+\rhead{\textsc{Assignment 2}}
+\lhead{\textsc{Linear Algebra}}
+%\lhead{\textsc{}}
+\cfoot{\thepage}
+
+\usepackage{lmodern}
+
+\newtheoremstyle{mytheoremstyle} % name
+{\topsep}                    % Space above
+{\topsep}                    % Space below
+{}                   % Body font
+{}                           % Indent amount
+{\bfseries}                   % Theorem head font
+{.}                          % Punctuation after theorem head
+{.5em}                       % Space after theorem head
+{}  % Theorem head spec (can be left empty, meaning ‘normal’)
+
+
+%\theoremstyle{mytheoremstyle}
+%
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}%[section]
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{obs}[definition]{Observation}
+\newtheorem{example}[definition]{Example}
+\newtheorem{assumption}[definition]{Assumption}
+\newtheorem{properties}[definition]{Properties}
+\newtheorem{motivation}[definition]{Motivation}
+\newtheorem{derivation}[definition]{Derivation}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{fact}[definition]{Fact}
+
+\theoremstyle{definition}
+\newtheorem*{solution}{Solution}
+
+\usepackage{caption}
+\captionsetup[figure]{labelfont=sc}
+\setlist[enumerate]{font=\bfseries\sffamily}
+
+
+
+%\addto\captionsenglish{\renewcommand*{\proofname}{\scshape Proof.}}
+
+
+%\numberwithin{equation}{section}
+
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathcal{N}}
+\DeclareMathOperator{\bindist}{\mathsf{B}}
+\DeclareMathOperator{\DD}{D}
+\DeclareMathOperator{\betadist}{Beta}
+\DeclareMathOperator{\E}{\mathbf{E}}
+\DeclareMathOperator{\cov}{Cov}
+\DeclareMathOperator{\var}{Var}
+\DeclareMathOperator{\samplespace}{\mathcal{S}}
+\DeclareMathOperator{\suchthat}{\text{ s.t. }}
+\DeclareMathOperator{\summod}{\accentset{\circ}{+}}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\1}{\mathbbm{1}}
+\DeclareMathOperator{\LL}{\mathscr{L}}
+\DeclareMathOperator{\Imaginary}{Im}
+\DeclareMathOperator{\supp}{Supp}
+\DeclareMathOperator{\powerset}{\mathcal{P}}
+\DeclareMathOperator{\normP}{norm}
+\DeclareMathOperator{\BB}{\mathscr{B}}
+\DeclareMathOperator{\contf}{\mathcal{C}}
+\DeclareMathOperator{\riemannint}{\mathscr{R}}
+\DeclareMathOperator{\osc}{osc}
+\DeclareMathOperator{\sigmaalg}{\sigma-algebra}
+\DeclareMathOperator{\MM}{\mathcal{M}}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\D}{\dif}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\PP}{\mathbf{P}}
+\DeclareMathOperator{\CC}{\mathscr{C}}
+\DeclareMathOperator{\B}{\mathcal{B}}
+\DeclareMathOperator{\sgn}{sgn}
+
+\DeclareMathOperator{\col}{\mathsf{C}}
+\DeclareMathOperator{\nul}{\mathsf{N}}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\zerov}{\mathbf{0}}
+\newcommand{\Tau}{\mathcal{T}}
+\newcommand{\rng}{\mathsf{R}}
+
+%\newcommand{\vect}[1][2]{\LL(#1,#2)}
+\newcommand{\Lspace}[4]{\mathscr{L}^{#1}(#2,#3,#4)}
+\newcommand{\condset}[4]{\left\{ #1  : \: #2 #3 #4 \right\}}
+\newcommand{\ball}[2]{B(#1,#2)}
+\newcommand{\innerproduct}[2]{\left\langle #1,#2 \right\rangle}
+\newcommand{\polyn}[2]{\mathcal{P}_{#1}(#2)}
+\newcommand{\GL}[2]{\mathrm{GL}_{#1}(#2)}
+\newcommand{\SL}[2]{\mathrm{SL}_{#1}(#2)}
+
+%\titleformat{\section}
+%{\centering\Large\normalfont\scshape}{\thesection .}{0.5em}{}
+%
+%\titleformat{\subsection}
+%{\centering\large\normalfont\scshape}{\thesubsection .}{0.5em}{}
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\begin{document}
+	\sloppy
+	\maketitle
+	
+	%In what follows, let
+	%\begin{itemize}[itemsep=0mm]
+	%	\item $V$ be an inner product space.
+	%\end{itemize}
+	
+	This document contains suggested solutions to a selection of \textit{representative} problems (which are graded) from the current homework assignment---a couple from each subsection assigned. They do not include every last detail, but should give you enough guidance to complete each problem fully on your own. 
+	
+	Even though the rest of the homework assignment are checked for completion, the grader will make an attempt at pointing out glaring faults in arguments whenever they arise. As such, some general comments on the completion of this assignment are provided at the end. 
+	
+	Below are a few conventions are used throughout grading your assignments, along with some ground rules for grading:
+	
+	
+	\begin{enumerate}[itemsep=.75em]
+		
+%		\item Raw score is given /100, but normalised to /10 on NYUClasses. The raw score makes partial marks easier to give out.
+		
+		\item Due to the relative brevity of this homework, up to 20 raw marks are given for completion of homework. An updated grading descriptions of raw marks are as follows:
+		
+		\begin{center}
+			\begin{tabular}{c | p{9cm}}
+				\textbf{Mark(s)} & \multicolumn{1}{c}{\textbf{Description}} \\
+				\hline
+				0 & Did not complete anything in the assignment / did not hand it in. \\
+				\hline
+				5 & A lighthearted attempt at a few questions are made. \\
+				\hline
+				10 & Up to half of the questions have been attempted, with some effort put in. \\
+				\hline
+				15 & More than three-fourths of the questions have been attempted, all with considerable progress. \\
+				\hline
+				%			40 & Missing attempts on only a few questions in the assignment. \\
+				%			\hline
+				20 & Attempted every question assigned, and has made considerable progress in every question.
+			\end{tabular}
+		\end{center}
+	
+		\noindent As always, the actual score given depends on the amount of assignment completed, and quality of the work attempted.
+		
+		%	\item When grading the questions indicated below, the following scale and description are considered:
+		%	
+		%	\begin{center}
+		%		\begin{tabular}{c | c}
+		%			\textbf{Mark(s)} & \textbf{Description} \\
+		%			\hline
+		%			0 & Did not complete anything to solve the problem. \\
+		%			2 & A mostly incorrect attempt has been made. \\
+		%			4 & A somewhat correct attempt has been made. \\
+		%			6 & One to a few mistakes has been made. \\
+		%			8 & One to two mistakes has been made, with wrong calculations or conclusions. \\
+		%			10 & Looks great!
+		%		\end{tabular}
+		%	\end{center}
+		%	
+		%	\bigskip
+		%	
+		%	\noindent Any odd-value scores are given at the discretion of the grader.
+		
+		\item Marks available and breakdown are indicated at the beginning of every question, inside square brackets. 
+		
+		\item Naming convention: in the following section, question indexed as $3.x.y$ should be read as ``question $y$ from chapter $3.x$ in Lay's textbook''.
+		
+		\item If you wish to dispute grading on question(s), please hand in your assignment to the instructor on the next homework submission day---with your comments/disputes written around the question(s).
+		
+	\end{enumerate}
+	
+	
+	
+	\clearpage
+	
+	\section*{Suggested Solutions}
+	
+	\begin{itemize}
+		\item As Alekos noted, the notation $\polyn{n}{\R}$ is used to denote the space of real polynomials of degree $\leq n$ (instead of $\mathbb{P}_n$).
+		\item Instead of Lay's notation $M_{m \times n}$ for the (vector) space of $m \times n$ matrices, the notation $\MM_{m \times n}$ is used throughout here.
+	\end{itemize}
+	
+	\bigskip
+	
+	
+	\begin{enumerate}[itemsep = 2mm]
+		\item[3.2.27] \textit{[\textbf{8}; 2 for each part---1 for T/F, 1 for correct justification]}
+		
+		\begin{enumerate}
+			\item \textbf{True}. As long as one is not multiplying the row by some constant, the absolute value of the determinant is unchanged.
+			
+			
+			\item \textbf{False}. If we scale any of the rows of the matrix when getting the echelon form, we change the determinant in absolute value.
+			
+			
+			\item \textbf{True}. Think of the following scenario: there is a row without a pivot, so it must be a row of all zeros.
+			
+			
+			\item \textbf{False}. As a counterexample,
+			\begin{align}
+				\label{eq1} \det \left( \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} \right) + \det  \left( \begin{bmatrix}  0 & 0 \\ 0 & 1  \end{bmatrix} \right) &= 0 \\
+				\label{eq2} \det \left( \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} + \begin{bmatrix}  0 & 0 \\ 0 & 1  \end{bmatrix} \right) &= 1
+			\end{align}
+			and obviously $\eqref{eq1} \neq \eqref{eq2}$.
+		\end{enumerate}
+
+
+		\item[3.2.28] \textit{[\textbf{8}; 2 for each part---1 for T/F, 1 for correct justification]}
+		
+		\begin{enumerate}
+			\item \textbf{False}. All operations multiply the determinant by $-1$, and $(-1)^3 = -1$.
+			
+			
+			\item \textbf{False}. Unless the matrix is triangular, the determinant is not given by the product of the diagonal entries.
+			
+			
+			\item \textbf{False}. The converse is true. A counterexample is the following:
+			\begin{align*}
+			T = \begin{bmatrix}
+				1 & 3 & 2 \\ & 0 & 1 \\ & & 7
+			\end{bmatrix}
+			\end{align*}
+			the determinant is 0, but neither two rows or columns are the same, nor a row or a column is zero.
+			
+			\item \textbf{False}. Recall that $\det (A^{-1}) = \frac{1}{\det (A)}$ when $A \in \GL{n}{\mathbb{F}}$. The proof is deceptively simple: because $A^{-1} A = I$, and $\det(A^{-1} A) = \det(I) = 1$, we have $\det(A^{-1} A) = \det(A^{-1}) \det(A) = 1 \implies \det(A^{-1}) = \frac{1}{\det(A)}$, and this is well-defined because for any invertible matrix $A$, $\det(A) \neq 0$.
+		\end{enumerate}
+		
+		
+		\item[3.3.6] \textit{[\textbf{7}; 1 for every attempt at calculating $x_1,x_2,x_3$---up to 3 in total, 1 for every correct $x_1,x_2,x_3$---up to 3 in total, 1 for having all of the above]}
+		
+		Rewriting the system of equations gives the following matrix equation representation:
+		\begin{align*}
+		\begin{bmatrix}
+		1 & 3 & 1 \\ -1 & 0 & 2 \\ 3 & 1 & 0
+		\end{bmatrix} \begin{bmatrix}
+		x_1 \\ x_2 \\ x_3
+		\end{bmatrix} = \begin{bmatrix}
+		4 \\ 2 \\ 2
+		\end{bmatrix}
+		\end{align*}
+		and using the notation in Lay, we need to calculate $\det(A_i (b))$ for $i=1,2,3$, where $A_i (b)$ is the matrix $A$ with $i$-th column replaced by column vector $b$. Hence, we have the following arithmetic:
+		\begin{align*}
+		x_1 &= \frac{\det(A_1 (b))}{\det (A)} = \frac{\det \left( \begin{bmatrix}
+			4 & 3 & 1 \\ 2 & 0 & 2 \\ 2 & 1 & 0
+			\end{bmatrix} \right) }{15} = \frac{6}{15} = \frac{2}{5} \\
+		x_2 &= \frac{\det(A_2 (b))}{\det(A)} = \frac{\det \left( \begin{bmatrix}
+			1 & 4 & 1 \\ -1 & 2 & 2 \\ 3 & 2 & 0
+			\end{bmatrix} \right) }{15} = \frac{12}{15} = \frac{4}{5} \\
+		x_3 &= \frac{\det(A_3 (b))}{\det (A)} = \frac{\det \left( \begin{bmatrix}
+			1 & 3 & 4 \\ -1 & 0 & 2 \\ 3 & 1 & 2
+			\end{bmatrix} \right)}{15} = \frac{18}{15}
+		\end{align*}
+		hence we have the solution
+		\begin{align*}
+		x = \begin{bmatrix}[1.3]
+		\frac{2}{5}  \\ \frac{4}{5}  \\ \frac{18}{15} 
+		\end{bmatrix}
+		\end{align*}
+		
+		\item[4.1.7] \textit{[\textbf{5}; 1 for ``no'', 1 for attempt at a counterexample, 2 for a correct counterexample 1 for having all of the above]}
+		
+		Let $\overline{\polyn{3}{\R}} \coloneqq \condset{ p \in \polyn{3}{\R}}{ \text{coefficients are integers} }{}{}$. Obviously, $\overline{\polyn{3}{\R}}$ is not a subspace of $\polyn{3}{\R}$. As a counterexample, take $p \in \overline{\polyn{3}{\R}}$ and $\gamma = \sqrt{2}$. To be clear, without loss, $p = ax^3 + bx^2 + cx + d$. Then, $\gamma p = a\sqrt{2} x^3 + b\sqrt{2} x^2 + c\sqrt{2} x + d\sqrt{2}$, where the coefficients are irrational. In other words, scalar multiplication in $\overline{\polyn{3}{\R}}$ is not closed in the space.
+		
+		
+		\item[4.1.24] \textit{[\textbf{10}; 2 for each part---1 for T/F, 1 for correct justification]}
+		
+		\begin{enumerate}
+			\item \textbf{True}. By definition.
+			
+			
+			\item \textbf{True}. By definition, the negative of $u$ is one that satisfies $u + (-u) = 0$. It then follows that $0 = (1 + (-1)) u = 1u + (-1)u $.
+			
+			
+			\item \textbf{True}. Any vector space is always a subspace of itself. 
+			
+			
+			\item \textbf{False}. Any element in $\R^2$ is not even in $\R^3$.
+			
+			
+			\item \textbf{False}. The last two parts are stated incorrectly.
+		\end{enumerate}
+		
+		
+		
+		\item[4.2.26] \textit{[\textbf{12}; 2 for each part---1 for T/F, 1 for correct justification]}
+		
+		\begin{enumerate}
+			\item \textbf{True}. This is not difficult to verify; try it yourself if you haven't already done so. 
+			
+			\item \textbf{True}. By definition.
+			
+			\item \textbf{False}. Recall the definition of $\col(A)$, where $A \in \MM_{m \times n}$:
+			\begin{align*}
+				\col(A) \coloneqq \condset{\vec{b} \in \R^m}{A\vec{x}}{=}{\vec{b} \text{ for some } \vec{x} \in \R^n}
+			\end{align*}
+			More abstractly, for a linear operator $T: V \mapsto W$, we can also find a matrix representation and define $\col(A)$ analogously.
+			
+			\item \textbf{True}. Recall the definition of the kernel of linear transformation $T : V \mapsto W$, where $V$ and $W$ are vector spaces:
+			\begin{align*}
+			\ker (T) \coloneqq \condset{v \in V}{T(v)}{=}{\zerov_{W}}
+			\end{align*}			
+			where $\zerov_W$ denotes the zero vector in $W$.
+			
+			\item \textbf{True}. The range (image) of linear transformation $T : V \mapsto W$ is a subspace of $W$ (prove it, if you haven't already), hence a vector space. In fact, we will prove this in 4.2.30.
+			
+			
+			\item \textbf{True}. This is because differentiation itself is a linear operator (with suitable choice of bases, of course).
+		\end{enumerate}
+		
+		
+		\item[4.2.30] \textit{[\textbf{5}; 1 for correctly stating what needs to be proven, 1 for correctly stating the zero element part, 2 for correctly proving linearity, 1 for having all of the above]}
+		
+		\begin{proof}
+			To show that the range of linear transformation $T: V \mapsto W$ (between two vector spaces) is a subspace of $W$, it suffices to show linearity holds, and that the $\zerov_W$ is sent to from some element in $V$. As a bit of notation, let $\rng(T) \coloneqq \text{range}(T)$.
+			
+			The easier to show is that $\zerov_W \in \rng(T)$. Obviously, $\zerov_W = T(\zerov_V)$, since $T$ is a linear transformation.
+			
+			The harder to show is linearity. To that end, notice that for all $u,v \in W$, there exists $r, r' \in \rng(T) \suchthat ar + br' \in \rng(T)$ for some $a,b \in \R$. If you don't immediately see this, note that, by definition, for such $r$ and $r'$, there exists $v, v' \in V \suchthat r= T(v)$ and $r' = T(v')$. This implies $ar + br' = aT(v) + b T(v') \stackrel{\text{linearity}}{=} T(\underbrace{av + bv'}_{\in V}) \in \rng(T)$, concluding the proof. 
+		\end{proof}
+		
+		
+		
+		\item[4.2.33] \textit{[\textbf{21}; see below for breakdowns]}
+		
+		\begin{enumerate}
+			\item \textit{[\textbf{6}; 1 for realising what exactly to prove, 1 for any attempt at a proof, 3 for correct proof \uline{with} justifications (if properties used are not stated explicitly, maximum 2 is given), 1 for having all of the above]}
+			
+			\begin{proof}
+				Take any $A,B \in \MM_{2 \times 2}$ and $c, d \in \R$. Then, we have
+				\begin{align*}
+				T(cA + dB) &= (cA + dB) + (cA + dB)^\intercal & \\
+				&= (cA + dB) + (cA^\intercal + dB^\intercal) & \text{property of transpose under addition} \\
+				&= cA + (dB + cA^\intercal) + dB^\intercal & \text{associativity of matrix addition} \\
+				&= cA + ( cA^\intercal + dB ) + dB^\intercal & \text{commutativity of matrix addition} \\
+				&= (cA +  cA^\intercal) + ( dB + dB^\intercal ) & \text{associativity of matrix addition} \\
+				&= c(A +  A^\intercal) + d( B + B^\intercal ) & \\
+				&= cT(A) + dT(B)
+				\end{align*}
+				as desired.
+			\end{proof}
+		
+			\item \textit{[\textbf{4}; 1 for a general example that works, 1 for the observation as stated below, 1 for correctly stating the general case of $A$, 1 for having all of the above]}
+			
+			As an example, note that for $B = \begin{bmatrix} & 1 \\ 1 &  \end{bmatrix}$, $A = \begin{bmatrix} & 1 \\ \phantom{0} &  \end{bmatrix}$ works. But, more generally, since $B = B^\intercal$, we have the case that $T(B) = B+B^\intercal = 2B$. Hence, for any such $B$, we can pick $A = \frac{1}{2}B$, so that $T(A) = \frac{1}{2} (B+B^\intercal) = B$.
+			
+			\item \textit{[\textbf{5}; 1 for stating what needs to be proven, 1 for an attempt at defining $\rng(T)$, 1 for correctly stating the definition, 1 for correct calculations and stating $B^\intercal = B$, 1 for having all of the above]}
+			
+			\begin{proof}
+				From the previous part, we've shown $ \condset{B}{B \in \MM_{2 \times 2}}{\text{is a symmetric matrix}}{} \subset \rng(T)$. It remains to show that only the matrices satisfying this property are in $\rng(T)$; in other words, we must show that any $B \in \rng(T)$ is symmetric, ie. $\condset{B}{B \in \MM_{2 \times 2}}{\text{is a symmetric matrix}}{} \supset \rng(T)$. To that end, we know $B = A + A^\intercal$; it then follows that $B^\intercal = (A + A^\intercal)^\intercal = A^\intercal + (A^\intercal)^\intercal = A^\intercal + A = A + A^\intercal = B$, so any $B \in \rng(T)$ is symmetric.
+			\end{proof}
+		
+		
+			\item \textit{[\textbf{6}; 1 for an attempt at defining $\ker(T)$, 1 for correctly stating the definition (per \eqref{defkernel}), 1 for attempt at calculation(s), 1 for correct calculations, 1 for stating \eqref{eqkernel}, 1 for having all of the above]}
+			
+			Recall that the kernel of a linear transformation is given by
+			\begin{align}
+			\label{defkernel}
+			\ker(T) \coloneqq \condset{A \in \MM_{2 \times 2}}{T(A)}{=}{\begin{bmatrix}
+				0 & 0 \\ 0& 0 
+				\end{bmatrix}}
+			\end{align}
+			Without loss, let $A = \begin{bmatrix}
+			a & b \\ c & d 
+			\end{bmatrix}$ for some $a,b,c,d \in \R$, we can write \eqref{defkernel} as
+			\begin{align*}
+				\ker(T) &\coloneqq \condset{A \in \MM_{2 \times 2}}{\begin{bmatrix}
+					a & b \\ c & d 
+					\end{bmatrix} + \begin{bmatrix}
+					a & c \\ b & d 
+					\end{bmatrix}}{=}{\begin{bmatrix}
+					0 & 0 \\ 0& 0 
+					\end{bmatrix}} \\
+				&=  \condset{A \in \MM_{2 \times 2}}{\begin{bmatrix}
+					2a & b+c \\ b+c & 2d 
+					\end{bmatrix} }{=}{\begin{bmatrix}
+					0 & 0 \\ 0& 0 
+					\end{bmatrix}} 
+			\end{align*}
+			giving rise to set of solutions $a=d=0$ and $b=-c$. Hence,
+			\begin{align}
+			\label{eqkernel}
+			\ker(T) = \condset{ \begin{bmatrix*}[c]
+				& -c \\ c & 
+				\end{bmatrix*}}{c}{\in}{\R}
+			\end{align}
+			so a choice of basis for this linear transformation is
+			\begin{align*}
+			\set{ \begin{bmatrix*}[c]
+				& -1 \\ 1 & 
+				\end{bmatrix*} }
+			\end{align*}
+		\end{enumerate}
+		
+		
+
+		
+		\item[4.3.26] \textit{[\textbf{4}; 1 for attempt of any kind, 1 for correcting stating the double angle formula, 1 for stating one of the correct bases---with or without justification, 1 for having all of the above]}
+		
+		There is hardly any trick to this question: noting that $\sin 2t = 2 \sin t \cos t$, we conclude that $\sin t \cos t = \frac{1}{2} \sin 2t$, so the last two functions in the set are scalar multiples of one another. Hence, either $\set{\sin t, \sin 2t}$ or $\set{\sin t, \sin t \cos t}$ is a basis for the set described.
+		
+		
+	\end{enumerate}
+		
+		\bigskip %\bigskip
+		
+		Below are the proofs of propositions laid out in the extra credit questions. These will be graded far more harshly than the questions from above. Marks are awarded for recognising overarching ideas in the propositions/theorems, and much less so for attempts.
+		
+	\begin{enumerate}
+		\item[Extra Credit 1] % Let $V$ be a fixed real vector space. Let $U, W\subseteq V$ be subspaces of $V$. Prove that $U\cap W$ is a subspace of $V$.\\\\
+		
+		\textit{[\textbf{10}; 1 for correctly stating \eqref{intersectionspace}, 2 for correctly stating what needs to be proven, 1 for first bullet point, 2 for second bullet point, 2 for third bullet point, 2 for having all of the above]}
+		
+		\begin{proof}
+			This is not difficult; recall that for $U, W \subset V$ (which are subspaces of a fixed vector space $V$ over some field),
+			\begin{align}
+				\label{intersectionspace}
+				U \cap W \coloneqq \condset{x}{x \in U}{\text{ and }}{x \in W}
+			\end{align}
+			To show \eqref{intersectionspace} defines a proper vector subspace, we need to show three properties:
+			\begin{itemize}
+				\item Because $U$ and $W$ are both vector subspaces, $\zerov \in U$ and $\zerov \in W$. It follows trivially that $\zerov \in (U \cap W)$ as well.
+				\item If $x,y \in (U \cap W)$, then by definition, $u,w \in U$ and $u, w \in W$. As $U$ and $W$ are subspaces, they are closed under addition. This means $u+w \in U$ and $u+w \in W$, implying $u+w \in (U \cap W)$.
+				\item As $U$ and $W$ are subspaces, they are closed under scalar multiplication. In other words, for any $u \in (U \cap W)$, for any $c \in \R$, $cu \in U$ and $cu \in W$, implying $cu \in (U \cap W)$.
+			\end{itemize}
+			Hence, the intersection of two vector subspaces is again a vector subspace.
+		\end{proof}
+		
+		
+		\item[Extra Credit 2] % Let $V$ be a fixed real vector space. Let $U, W\subseteq V$ be subspaces of $V$. Prove that $U\cup W$ is a subspace of $V$ if and only if $U\subseteq W$ or $W\subseteq U$. 
+		
+		\textit{[\textbf{10}; 1 for correctly stating \eqref{unionspace}, 3 for $(\Leftarrow)$, 5 for $(\Rightarrow)$, 1 for having all of the above]}
+		
+		Before we prove the proposition, let us see why the union of two vector subspaces is generally not a vector subspace. Recall that the union of two sets is defined as
+		\begin{align}
+		\label{unionspace}
+		U \cup W \coloneqq \condset{x}{x \in U}{\text{ or }}{x \in V}
+		\end{align}
+		A simple, nontrivial counterexample goes as follows: let 
+		\begin{align*}
+		U \coloneqq \condset{ \begin{bmatrix} x \\ 0 \end{bmatrix}}{x}{\in}{\R} \subset \R^2 \\
+		W \coloneqq \condset{ \begin{bmatrix} 0 \\ y \end{bmatrix}}{y}{\in}{\R} \subset \R^2
+		\end{align*}
+		Without loss, take $u = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \in U \subset (U \cup W)$ and $w = \begin{bmatrix} 0 \\ 1 \end{bmatrix} \in W \subset (U \cup W)$. However, note that $u + v = \begin{bmatrix} 1 \\ 1 \end{bmatrix} \not\in (U \cup W)$! Hence, the proposition stated requires us to prove that the union of two subspaces is again a subspace under a restriction. And, as we will see below, one direction is rather trivial.
+		
+		\bigskip 
+		
+		\begin{proof}
+			$(\Leftarrow)$ If both qualifiers are true, there is nothing to prove. Hence, suppose either $U\subset W$ or $W\subset U$; without loss, assume the former. Then, $U \cup W = W \subset V$ by assumption. The conclusion holds true had we assumed the latter---requiring only exchanging the placements of the subspaces in our earlier reasoning.
+			
+			\noindent $(\Rightarrow)$ Assume $(U\cup W)$ is a subspace of $V$. By way of contradiction, assume that $U \not\subset W$ and $W \not\subset U$. Then, without loss, there exists elements $x \in (U \setminus W)$ and $y \in (W \setminus U)$. Since we assume $(U \cup W)$ is a subspace of $V$, elements in $(U \cup W)$ are closed under addition. Hence, $x + y \in (U \cup W)$. By definition (see \eqref{unionspace}), we have either $x+y \in U$ or $x+y \in W$.
+			
+			Assume the former. Note that we can write $y = (x+y) - x$. Since $(x+y)$ and $x$ are elements of $U$, $y = (x+y) - x \in U$. But, this contradicts our choice of $y \in (W \setminus U)$.
+			
+			Assume the latter. \textit{Mutatis mutandis}, write $x = (x+y) - y$. Since $(x+y)$ and $x$ are elements of $W$, $y = (x+y) - x \in W$. But, this contradicts our choice of $x \in (U \setminus W)$.
+			
+			In either case, we've reached a contradiction. 
+		\end{proof}
+		
+	\end{enumerate}
+	
+	
+	\clearpage
+	
+	
+\section*{General Comments}
+
+
+The point of studying mathematics is to be able to come up with \textit{simple, nontrivial examples}, from which one can think about the fundamental principles underlying them. Some of these T/F questions help one in doing exactly that. Some of these proofs-type questions also test one's understanding of the fundamentals---including, but not limited to, definitions, basic propositions, some theorems and their consequences, and so on.
+
+Some general comments for the homework (as a whole):
+\begin{itemize}
+	\item Most people did an excellent job providing counterexamples, and I was pleasantly surprised by the growing number of people who attempted to justify their responses to T/F questions.
+	
+	\item To those who did the extra credit question(s): they were all valiant attempts. There were good ideas in those responses, and it was good seeing that you know what needs to be proven.
+\end{itemize}
+
+\noindent Here are some comments for each question (some of which familiar from the previous homework):
+
+\bigskip
+
+\begin{enumerate}[itemsep = 2mm]
+	\item[3.2.27] For part (b), remember that $A \leadsto U$ (with $U$ being the row-reduced echelon form of $A$) can involve scaling rows. Some forgot that this is a possibility.
+	
+	
+	\item[3.2.28] All good!
+	
+	
+	
+	\item[3.3.6] Be careful with calculations.
+	
+	
+	
+	\item[4.1.7] Commendable efforts at coming up with counterexamples! Again, as a rule of thumb, explaining why this is the case is good, but please provide an explicit counterexample.
+	
+	
+	
+	\item[4.1.24] \begin{itemize}
+		\item For part (b), use the fact that there exists an additive inverse for all $u$.
+		
+		\item For part (e), be careful with qualifiers in definitions: as I specified in the general comments section to quiz 3, if you do not specify what $u,v,c$ are, they are just symbols.
+	\end{itemize}
+	
+	
+	
+	\item[4.2.26] Mostly okay---just some minor quibbles that pertain to some responses, all of which I wrote on your papers.
+	
+	
+	
+	
+	\item[4.2.30] Use the definition of range explicitly! Remember the image of $T: V \mapsto W$ is defined as
+	\begin{align*}
+	\im (T) = \rng(T) \coloneqq \condset{w \in W}{T(v)}{=}{w \text{ for some } v \in V}
+	\end{align*}
+	so for all $w \in \rng(T)$ one can find some $v \in V$ such that $w = T(v)$. We do not know if the linear transformation is surjective or not (ie. we do not know if $\im(T) = W$), which some responses assumed.
+	
+	
+	\item[4.2.33] \begin{itemize}
+		\item For part (a), I decided not to take off marks for \textit{not} stating the properties of matrix addition, because almost none of the responses actually had the words ``matrix addition properties'' written. In the future, \textit{please} write down whatever properties used in the derivation---as I will take off some marks if these are not shown.
+		
+		\item For part (c), only one person explicitly stated the subset relation that we need to show. Again, I chose not to penalise the lack thereof; in the future, however, I will do so.
+		
+		\item For part (d), the kernel of a linear operator $T: V \mapsto W$ is a \textit{set} of elements in $V$! Again, understand the objects you are working with; knowing this will go a long way in your career in mathematics.
+	\end{itemize}
+	
+	
+	
+	
+	\item[4.3.26] All good! This is the most well-done question on the homework.
+	
+	
+	
+	\item[Extra Credit 1] %Let $V$ be a fixed real vector space. Let $U, W\subseteq V$ be subspaces of $V$. Prove that $U\cap W$ is a subspace of $V$.
+	
+	As long as you know the definition of intersection of \textit{sets} (per \eqref{intersectionspace}), this is easy to prove.
+	
+	
+	\item[Extra Credit 2] %Let $V$ be a fixed real vector space. Let $U, W\subseteq V$ be subspaces of $V$. Prove that $U\cup W$ is a subspace of $V$ if and only if $U\subseteq W$ or $W\subseteq U$. 
+	
+	As expected, $(\Rightarrow)$ is harder to prove for most people. Some wrote down the right ideas, but not clearly. If the big idea is not clear to you, see the earlier example in the solutions to see why the proposition falls apart if $W \not\subset U$ (or vice versa).
+	
+\end{enumerate}
+
+	
+\end{document}
