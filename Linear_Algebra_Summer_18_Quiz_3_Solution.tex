@@ -415,7 +415,9 @@ The following are general observations from the responses collected.
 		\end{align*}
 		but it is obvious that $-c \notin \mathcal{U}$, where $c \in \mathcal{U}$.
 		
-		\item My mistake: $\mathbb{C}$ is a vector space over $\R$, though it was not obvious (at least, to me) at first glance why this should be the case. It was not clear to me why the field $\Com$ defines a vector space over another field $\R$. After some thinking, it is not hard to see that $\mathbb{C}$ is a two-dimensional vector space over $\R$, under the ``usual'' operations:
+		\item Any vector space over infinite fields (like $\R$, $\Q$, or $\Com$) is either the space $\{\vec{0}\}$, or has infinitely many elements. Think about this in the following way: for any nonzero vector $x$ and nonzero field (in this case, $\R$) elements $k_1,k_2$, $k_1 x = k_2 x \iff k_1 = k_2$. As such, there are infinitely many elements of the form $kx$, as long as the vector space is nonzero (and nonempty) over an infinite field\footnote{There are finite fields; if you choose to learn more algebra, you will come across examples like $\mathbb{F}_p$---field of integers modulo $p$ for some $p$.}.
+		
+		\item \textbf{My mistake}: $\mathbb{C}$ is a vector space over $\R$, though it was not obvious (at least, to me) at first glance why this should be the case. It was not clear to me why the field $\Com$ defines a vector space over another field $\R$. After some thinking, it is not hard to see that $\mathbb{C}$ is a two-dimensional vector space over $\R$, under the ``usual'' operations:
 		\begin{align*}
 		&\fullfunction{+}{\Com \times \Com}{\Com}{(x,y)}{x+y \coloneqq (a+c,b+d)} \\
 		&\fullfunction{\cdot}{\R \times \Com}{\Com}{(\alpha,x)}{\alpha x \coloneqq (\alpha a, \alpha b)}
