@@ -157,7 +157,7 @@
 \DeclareMathOperator{\D}{\dif}
 \DeclareMathOperator{\Span}{span}
 \DeclareMathOperator{\PP}{\mathbf{P}}
-\DeclareMathOperator{\CC}{\mathscr{C}}
+\DeclareMathOperator{\CC}{\mathbb{C}}
 \DeclareMathOperator{\sgn}{sgn}
 
 \DeclareMathOperator{\col}{Col}
@@ -352,6 +352,45 @@ is similar to a diagonal matrix.
 
 The following are general observations from the responses collected.
 
+
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item The most glaring flaw in attempts to define \textit{eigenvector} is the failure to exclude the case when $Av = \lambda v$ trivially true: when $v = 0$. We are not interested in looking for the set of values $\lambda$ such that the relation holds, since the statement would be true for all $\lambda \in \R$.
+		
+		An eigenvector is associated with an eigenvalue, counting multiplicities.
+		
+		\item Qualifiers are important to state in the definition; just stating $Q^{-1}$ without stating $Q$ is invertible is \textit{not} technically wrong, but then $Q^{-1}$ is just a symbol.
+	\end{enumerate}
+
+
+	\item For some reason, people use the power rule for diagonal matrices when looking at $U$, an upper triangular matrix. Be careful with calculations.
+	
+	For the two or three people who got \textit{everything} but $A^{10}$, \textit{please be careful with matrix multiplications}.
+	
+	
+	\item Writing out $\det(A-\lambda I)$ fully gives
+	\begin{align*}
+	\det \begin{bmatrix}
+	1-\lambda & & \\ & 1-\lambda & 1 \\ & 1 & 1-\lambda
+	\end{bmatrix}
+	\end{align*}
+	so the polynomial is $(1-\lambda)^3 - (1-\lambda)$. Be careful when setting up the determinant.
+	
+	
+	\item There were some \textit{weird} responses to this. Some did state the eigenvalues correctly, but fail to use definition of conjugates to explain when $A \sim D$, where $\sim$ denotes the conjugate relation and $D$ is a $3 \times 3$ diagonal matrix. Others tried to say a change of coordinates is possible to transform $A$ into a diagonal matrix. The latter is the basic heuristics, but spelling it out is important.
+	
+	As Alekos tried to explain in the notes posted last week, the main point of diagonalisation is to be able to say $A$ and $D$ represent the same linear transformation, $T(v) = \lambda v$, where a nonzero $v$ is called eigenvector and corresponding $\lambda \in \R$ is the eigenvalue. Conjugation by change of basis matrix $P$ gives us this relation.
+	
+	Also, just because a matrix has independent columns \textit{does not mean} it is diagonalisable. A basic counterexample is the rotation matrix in $\R^2$:
+	\begin{align*}
+	R = \begin{bmatrix}
+	0 & -1 \\ 1 & 0
+	\end{bmatrix}
+	\end{align*}
+	and one can easily tell that the characteristic polynomial does not have a solution in $\R$ (it does in $\CC$, though).
+	
+	For those who did not explain what $D$ and $P$ are: this is problematic, because those form the reasoning for why $A \sim D$!
+\end{enumerate}
 
 
 
