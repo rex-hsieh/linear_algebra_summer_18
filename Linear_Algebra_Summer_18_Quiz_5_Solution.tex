@@ -1,0 +1,362 @@
+\documentclass[answers,11pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[letterpaper,top=1.4in,bottom=1.2in,right=1.3in,left=1.3in]{geometry}
+
+\usepackage{amsmath,amssymb}
+%\usepackage{commath}
+%\usepackage{mathtools}
+%\usepackage{multicol}
+
+\newcommand{\class}{Linear Algebra}
+\newcommand{\term}{Summer 2018}
+\newcommand{\examnum}{Quiz 5: Suggested Solutions}
+\newcommand{\examdate}{08.06.18}
+\newcommand{\timelimit}{20 minutes}
+
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+\usepackage{hyphenat}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{mathrsfs}
+
+\usepackage{array, booktabs, caption}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage{hhline}% http://ctan.org/pkg/hhline
+\usepackage{makecell} 
+\usepackage{enumitem}
+\usepackage{bbm}
+\usepackage{soul}
+
+%\usepackage{mtpro2}
+%\usepackage[nottoc]{tocbibind}
+
+\usepackage[bottom]{footmisc}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{url}
+
+\usepackage[normalem]{ulem}
+\usepackage{relsize}
+\usepackage{commath}
+\usepackage{mathtools}
+\allowdisplaybreaks
+
+\usepackage{float}
+
+\usepackage{color}
+\usepackage{commath}
+\usepackage{amsthm}
+
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{textcomp}
+
+\renewcommand\theadalign{lc}
+\renewcommand\theadfont{\bfseries}
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+
+\usepackage{nomencl}
+\makenomenclature
+
+\usepackage{accents}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{#1}}
+\makeatother
+
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+	\edef\arraystretch{#1}%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{*\c@MaxMatrixCols c}}
+\makeatother
+
+
+\newtheoremstyle{mytheoremstyle} % name
+{\topsep}                    % Space above
+{\topsep}                    % Space below
+{}                   % Body font
+{}                           % Indent amount
+{\bfseries}                   % Theorem head font
+{.}                          % Punctuation after theorem head
+{.5em}                       % Space after theorem head
+{}  % Theorem head spec (can be left empty, meaning ‘normal’)
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition} %[section]
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{obs}[definition]{Observation}
+\newtheorem{example}[definition]{Example}
+\newtheorem{assumption}[definition]{Assumption}
+\newtheorem{properties}[definition]{Properties}
+\newtheorem{motivation}[definition]{Motivation}
+\newtheorem{derivation}[definition]{Derivation}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{fact}[definition]{Fact}
+
+\usepackage{caption}
+\captionsetup[figure]{labelfont=sc}
+\setlist[enumerate]{font=\bfseries\sffamily}
+
+
+
+%\addto\captionsenglish{\renewcommand*{\proofname}{\scshape Proof.}}
+
+
+%\numberwithin{equation}{section}
+
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathcal{N}}
+\DeclareMathOperator{\bindist}{\mathsf{B}}
+\DeclareMathOperator{\DD}{D}
+\DeclareMathOperator{\betadist}{Beta}
+\DeclareMathOperator{\E}{\mathbf{E}}
+\DeclareMathOperator{\cov}{Cov}
+\DeclareMathOperator{\var}{Var}
+\DeclareMathOperator{\samplespace}{\mathcal{S}}
+\DeclareMathOperator{\suchthat}{\text{ s.t. }}
+\DeclareMathOperator{\summod}{\accentset{\circ}{+}}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\1}{\mathbbm{1}}
+\DeclareMathOperator{\LL}{\mathscr{L}}
+\DeclareMathOperator{\Imaginary}{Im}
+\DeclareMathOperator{\supp}{Supp}
+\DeclareMathOperator{\powerset}{\mathcal{P}}
+\DeclareMathOperator{\normP}{norm}
+\DeclareMathOperator{\BB}{\mathcal{B}}
+\DeclareMathOperator{\contf}{\mathcal{C}}
+\DeclareMathOperator{\riemannint}{\mathscr{R}}
+\DeclareMathOperator{\osc}{osc}
+\DeclareMathOperator{\sigmaalg}{\sigma-algebra}
+\DeclareMathOperator{\MM}{\mathscr{M}}
+\DeclareMathOperator{\M}{\mathcal{M}}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\D}{\dif}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\PP}{\mathbf{P}}
+\DeclareMathOperator{\CC}{\mathscr{C}}
+\DeclareMathOperator{\sgn}{sgn}
+
+\DeclareMathOperator{\col}{Col}
+\DeclareMathOperator{\nul}{Null}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+
+\newcommand{\Tau}{\mathcal{T}}
+\newcommand{\zerov}{\mathbf{0}}
+
+\newcommand{\uu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+
+%\newcommand{\vect}[1][2]{\LL(#1,#2)}
+\newcommand{\Lspace}[4]{\mathscr{L}^{#1}(#2,#3,#4)}
+\newcommand{\condset}[4]{\left\{ #1  : \: #2 #3 #4 \right\}}
+\newcommand{\ball}[2]{B(#1,#2)}
+\newcommand{\innerproduct}[2]{\left\langle #1,#2 \right\rangle}
+\newcommand{\polyn}[2]{\mathcal{P}_{#1}(#2)}
+\newcommand{\GL}[2]{\mathrm{GL}_{#1}(#2)}
+\newcommand{\proj}[2]{\mathrm{Proj}_{#1} {#2} }
+\newcommand{\SL}[2]{\mathrm{SL}_{#1}(#2)}
+
+%\titleformat{\section}
+%{\centering\Large\normalfont\scshape}{\thesection .}{0.5em}{}
+%
+%\titleformat{\subsection}
+%{\centering\large\normalfont\scshape}{\thesubsection .}{0.5em}{}
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name:} & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} &&\\
+\textbf{\examdate} &&\\
+\textbf{Time Limit: \timelimit} 
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+
+This quiz contains 2 sides (including this cover page) and 4 questions.\\
+Total of points is \numpoints.
+
+
+\begin{center}
+Grade Table (for grader use only)\\
+\addpoints
+\gradetable[v][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+\question[30] Let $V$ be an inner product space with inner product $\langle\cdot,\cdot\rangle:V\times V\to \mathbb{R}$.
+\noaddpoints
+\begin{parts}
+	\part[15] Define what it means for two vectors $v,w\in V$ to be orthogonal.
+	
+	\begin{solution}
+		Two vectors $v,w \in V$ are \textbf{orthogonal} iff $\innerproduct{v}{w} = 0$.
+		
+		\textit{[10 for the statement above, 5 for completion. If some consequence of orthogonal vectors is given, then a maximum of 2 marks can be awarded]}
+		
+		\textit{[If the condition $v \cdot w = 0$ is provided (ie. mistaking the definition of orthogonal vectors in $V$ for that in $\R^n$), a maximum of 5 marks can be awarded]}
+	\end{solution}
+	
+	\part[15] State the Gram-Schmidt Orthogonalization Algorithm for $\{v_1,\ldots, v_k\}\subseteq \mathbb{R}^n$. 10 bonus points if you specify it instead for a general inner product space $V$, i.e. $\{v_1,\ldots, v_k\}\subseteq V$.
+	
+	\begin{solution}
+		For nontrivial subspaces of $\R^n$, given a basis $\set{v_1,v_2,\dots,v_k}$, Gram-Schmidt produces an orthogonal basis $\set{x_1,x_2,\dots,x_k}$ inductively, by setting
+		\begin{align*}
+			x_1 &= v_1 \\
+			x_2 &= v_2 - \frac{ {x_1} \cdot {v_2}}{	{x_1} \cdot {x_1}} x_1 \\
+			x_3 &= v_3 - \frac{ {x_1} \cdot {v_3}}{ {x_1} \cdot {x_1}} x_1 - \frac{ {x_2} \cdot {v_3}}{ {x_2} \cdot {x_2}} x_2 \\
+			x_4 &= v_4 - \frac{ {x_1} \cdot {v_4}}{ {x_1} \cdot {x_1}} x_1 - \frac{ {x_2} \cdot {v_4}}{ {x_2} \cdot {x_2}} x_2 - \frac{ {x_3} \cdot {v_4}}{ {x_3} \cdot {x_3}} x_3 \\
+			\vdots & \phantom{==} \vdots \\
+			x_k &= v_k - \left( \sum_{i=1}^{k-1} \frac{ {x_i} \cdot {v_k} }{ {x_i} \cdot {x_i}} x_i \right)
+		\end{align*}
+		
+		For a general inner product space, Gram-Schmidt works similarly---just replacing dot products with inner products:
+		\begin{align*}
+			x_1 &= v_1 \\
+			x_2 &= v_2 - \frac{\innerproduct{x_1}{v_2}}{\innerproduct{x_1}{x_1}} x_1 \\
+			x_3 &= v_3 - \frac{\innerproduct{x_1}{v_3}}{\innerproduct{x_1}{x_1}} x_1 - \frac{\innerproduct{x_2}{v_3}}{\innerproduct{x_2}{x_2}} x_2 \\
+			x_4 &= v_4 - \frac{\innerproduct{x_1}{v_4}}{\innerproduct{x_1}{x_1}} x_1 - \frac{\innerproduct{x_2}{v_4}}{\innerproduct{x_2}{x_2}} x_2 - \frac{\innerproduct{x_3}{v_4}}{\innerproduct{x_3}{x_3}} x_3 \\
+			\vdots & \phantom{==} \vdots \\
+			x_k &= v_k - \left( \sum_{i=1}^{k-1} \frac{ \innerproduct{x_i}{v_k} }{\innerproduct{x_i}{x_i}} x_i \right)
+		\end{align*}
+		
+		In either case, we know that $\Span\set{v_1,v_2,\dots,v_k} = \Span\set{x_1,x_2,\dots,x_k}$, by a theorem introduced in class.
+		
+		\textit{[5 for stating \uline{correctly} $\proj{\Span \set{ x_j}_{j=1}^{i-1} }{v_i}$ for $i \geq 2$, 8 for correctly stating the algorithm for basis $\set{v_1,\dots,v_k}$, 2 for having all of the above. For the extra credit, 2 for recognising to switch notations, 6 for correct restatements of algorithm, 2 for successful completion.]}
+	\end{solution}
+\end{parts}
+
+\addpoints
+
+
+\question[20] Given 
+\begin{equation*}
+x_1=
+\begin{bmatrix}
+1\\
+1\\
+1
+\end{bmatrix}\:\:\:
+x_2=
+\begin{bmatrix}
+0\\
+1\\
+1
+\end{bmatrix}\:\:\:
+x_3=
+\begin{bmatrix}
+0\\
+0\\
+1
+\end{bmatrix}
+\end{equation*}
+compute an \textbf{orthonormal} basis for $W=\text{span}(x_1,x_2,x_3)$. 
+\addpoints
+
+\begin{solution}
+	Notice that $W = \R^3$ because $\set{x_1,x_2,x_3}$ is a linearly independent set of vectors in $\R^3$, hence it spans $\R^3$. The canonical/standard basis in $\R^3$ suffices.
+	
+	Gram-Schmidt also works as well.
+	
+	\textit{[5 for recognising that $W = \R^3$, 5 for two correct orthonormal vectors in the new basis, 5 for the third correct vector, 5 for having all of the above]}
+	
+	\textit{[If one uses G-S, then: 5 for attempting to use G-S, 5 for two correct orthonormal vectors in the new basis, 5 for the third correct vector, 5 for having all of the above]}
+\end{solution}
+
+\question[25] Compute the orthogonal projection of $y$ onto $W = \text{span}(u_1,u_2)$ where 
+\begin{equation*}
+y=
+\begin{bmatrix}
+6\\
+3\\
+-2
+\end{bmatrix}\:\:\:
+u_1=
+\begin{bmatrix}
+3\\
+-1\\
+2
+\end{bmatrix}\:\:\:
+u_2=
+\begin{bmatrix}
+1\\
+-1\\
+-2
+\end{bmatrix}.
+\end{equation*}
+\addpoints
+
+\begin{solution}
+	First, notice that $\innerproduct{u_1}{u_2}_{\R^3} = 0$, implying they are linearly independent. This spans a plane in $\R^3$. We now know that the question makes sense. To calculate the projection, and with the knowledge that $\innerproduct{\cdot}{\cdot}$ in the calculations below mean the inner product in $\R^3$, we have
+	\begin{align}
+	\nonumber	\proj{W}{y} &= \frac{\innerproduct{y}{u_1}}{\innerproduct{u_1}{u_1}} u_1 + \frac{\innerproduct{y}{u_2}}{\innerproduct{u_2}{u_2}} u_2 \\
+	\label{eq1}	&= \frac{11}{14} v_1 + \frac{7}{6} v_2\\
+	\label{eq2}	&= \begin{bmatrix}[1.2]
+		\frac{74}{21} \\ -\frac{41}{21} \\ -\frac{16}{21}
+		\end{bmatrix}
+	\end{align} 
+	
+	\textit{[5 for checking $\set{u_1,u_2}$ is orthogonal, 5 for subsequently concluding that $\set{u_1,u_2}$ is an orthogonal basis, 2 for stating/acknowledging \uline{correctly} the projection formula, 2 for attempt at calculation, 4 for obtaining \eqref{eq1}, 4 for obtaining \eqref{eq2}, 3 for having all of the above]}
+
+	\textit{[If one does not justify $\set{u_1,u_2}$ is an orthogonal basis before using the formula, a maximum of 10 marks is awarded]}
+\end{solution}
+
+\question[25] Given the inner product on $C^0([0,1],\mathbb{R})$ defined by 
+\begin{equation*}
+\langle f,g\rangle =\int_0^1 f(t)g(t)dt
+\end{equation*}
+determine whether or not $p(t)=2t-1$ and $q(t)=10t$ are orthogonal. (Show work)
+
+\begin{solution}
+	A simple calculation gives
+	\begin{align*}
+		\innerproduct{p}{q} &= \int_{0}^{1} 10t(2t - 1) \D t = \int_{0}^{1} 20t^2 - 10t \D t \\
+		&= \eval{\left[ \frac{20}{3} t^3 - 5t^2 \right]}_{0}^{1} \\
+		&= \frac{5}{3}
+	\end{align*}
+	hence the functions are not orthogonal.
+	
+	\textit{[2 for any attempt, 3 for \uline{correctly} setting up the integral, 5 for \uline{correct} integrand, 8 for \uline{correct} calculations, 2 for \uline{correct} evaluation of the integral, 5 for subsequent conclusion]}
+\end{solution}
+
+
+\end{questions}
+
+\end{document}
+
