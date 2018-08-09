@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.7.2)  31 JUL 2018 14:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.7.2)  6 AUG 2018 14:00
 entering extended mode
-**./Linear-Algebra-Assignment-4-Solutions-and-Comments.tex
-(Linear-Algebra-Assignment-4-Solutions-and-Comments.tex
+**./Linear-Algebra-Assignment-5-Solutions-and-Comments.tex
+(Linear-Algebra-Assignment-5-Solutions-and-Comments.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amscls\amsart.cls
@@ -198,12 +198,6 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen127
 \Gin@req@width=\dimen128
 )
-("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgfplots\pgfplots
-.sty"
-("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplo
-ts.revision.tex")
-Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
-
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlayer
 \tikz.sty"
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pg
@@ -522,6 +516,12 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 er\tikz\libraries\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
+("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgfplots\pgfplots
+.sty"
+("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplo
+ts.revision.tex")
+Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
+
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplo
 ts.code.tex"
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgfplots\pgfplo
@@ -970,46 +970,18 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen289
 \l_MT_below_shortintertext_sep=\dimen290
 )
-("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tikz-cd\tikz-cd.s
-ty"
-Package: tikz-cd 2014/10/30 v0.9e Commutative diagrams with tikz
-
-("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\generic\tikz-cd\tikzlib
-rarycd.code.tex"
-("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlay
-er\tikz\libraries\tikzlibrarymatrix.code.tex"
-File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.4)
-)
-("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlay
-er\tikz\libraries\tikzlibraryquotes.code.tex"
-File: tikzlibraryquotes.code.tex 2014/03/21 v3.0.1a (rcs-revision 1.4)
-)
-("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\p
-gflibraryarrows.meta.code.tex"
-File: pgflibraryarrows.meta.code.tex 2015/05/13 v3.0.1a (rcs-revision 1.13)
-\pgfarrowinset=\dimen291
-\pgfarrowlength=\dimen292
-\pgfarrowwidth=\dimen293
-\pgfarrowlinewidth=\dimen294
-)))
-("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty"
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count155
-\float@exts=\toks54
-\float@box=\box46
-\@float@everytoks=\toks55
-\@floatcapt=\box47
-) ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.s
-ty"
+("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty
+"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks56
-\inpenc@posthook=\toks57
+\inpenc@prehook=\toks54
+\inpenc@posthook=\toks55
  ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
+
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
@@ -1340,12 +1312,12 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def
 "
 File: babel.def 2018/02/14 3.18 Babel common definitions
-\babel@savecnt=\count156
-\U@D=\dimen295
+\babel@savecnt=\count155
+\U@D=\dimen291
 
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtbabel.
 def")
-\bbl@dirlevel=\count157
+\bbl@dirlevel=\count156
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -1506,24 +1478,32 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )
+("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count157
+\float@exts=\toks56
+\float@box=\box46
+\@float@everytoks=\toks57
+\@floatcapt=\box47
+)
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\nomencl\nomencl.s
 ty"
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
-\nomlabelwidth=\dimen296
-\nom@tempdim=\dimen297
+\nomlabelwidth=\dimen292
+\nom@tempdim=\dimen293
 \nomitemsep=\skip81
 )
 \@nomenclaturefile=\write4
-\openout4 = `Linear-Algebra-Assignment-4-Solutions-and-Comments.nlo'.
+\openout4 = `Linear-Algebra-Assignment-5-Solutions-and-Comments.nlo'.
 
 
-Writing nomenclature file Linear-Algebra-Assignment-4-Solutions-and-Comments.nl
+Writing nomenclature file Linear-Algebra-Assignment-5-Solutions-and-Comments.nl
 o
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bezos\accents.sty
 "
 Package: accents 2006/05/12 v1.3 Math Accent Tools
-\cc@skew=\dimen298
-\cc@wd=\dimen299
+\cc@skew=\dimen294
+\cc@wd=\dimen295
 \cc@code=\count158
 \cc@group=\count159
 \cc@skewchar=\count160
@@ -1579,72 +1559,72 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 )
 \c@definition=\count161
 
-(Linear-Algebra-Assignment-4-Solutions-and-Comments.aux)
-\openout1 = `Linear-Algebra-Assignment-4-Solutions-and-Comments.aux'.
+(Linear-Algebra-Assignment-5-Solutions-and-Comments.aux)
+\openout1 = `Linear-Algebra-Assignment-5-Solutions-and-Comments.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 227.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 227.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 228.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 228.
 
 
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 227.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 228.
 
 
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 227.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 228.
 
 
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 227
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 228
 .
 
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 227
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 228
 .
 
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 227.
+(Font)              <8> on input line 228.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 227.
+(Font)              <6> on input line 228.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 227.
-LaTeX Font Info:    Try loading font information for U+msa on input line 227.
+(Font)              <5> on input line 228.
+LaTeX Font Info:    Try loading font information for U+msa on input line 228.
 
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 227.
+LaTeX Font Info:    Try loading font information for U+msb on input line 228.
  ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
 "
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 227.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 228.
 
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd
 "
@@ -1689,13 +1669,13 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 kii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count162
-\scratchdimen=\dimen300
+\scratchdimen=\dimen296
 \scratchbox=\box48
 \nofMPsegments=\count163
 \nofMParguments=\count164
 \everyMPshowfont=\toks58
 \MPscratchCnt=\count165
-\MPscratchDim=\dimen301
+\MPscratchDim=\dimen297
 \MPnumerator=\count166
 \makeMPintoPDFobject=\count167
 \everyMPtoPDFconversion=\toks59
@@ -1719,16 +1699,16 @@ G,.JBIG2,.JB2,.eps]
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 227.
+ on input line 228.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 227.
+LaTeX Info: Redefining \selectfont on input line 228.
 \AtBeginShipoutBox=\box49
-Package hyperref Info: Link coloring OFF on input line 227.
+Package hyperref Info: Link coloring OFF on input line 228.
 
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.
 sty"
@@ -1740,39 +1720,30 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count168
 )
-LaTeX Info: Redefining \ref on input line 227.
-LaTeX Info: Redefining \pageref on input line 227.
-LaTeX Info: Redefining \nameref on input line 227.
- (Linear-Algebra-Assignment-4-Solutions-and-Comments.out)
-(Linear-Algebra-Assignment-4-Solutions-and-Comments.out)
+LaTeX Info: Redefining \ref on input line 228.
+LaTeX Info: Redefining \pageref on input line 228.
+LaTeX Info: Redefining \nameref on input line 228.
+ (Linear-Algebra-Assignment-5-Solutions-and-Comments.out)
+(Linear-Algebra-Assignment-5-Solutions-and-Comments.out)
 \@outlinefile=\write5
-\openout5 = `Linear-Algebra-Assignment-4-Solutions-and-Comments.out'.
+\openout5 = `Linear-Algebra-Assignment-5-Solutions-and-Comments.out'.
 
 
 
 LaTeX Font Warning: Font shape `OT1/lmr/bx/sc' undefined
-(Font)              using `OT1/lmr/bx/n' instead on input line 230.
+(Font)              using `OT1/lmr/bx/n' instead on input line 231.
 
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 236.
-
-("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 247
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 248
 .
-
 ("C:\Users\mhh357\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ot1lmss.fd"
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 290.
+(Font)              <10> on input line 251.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 290.
+(Font)              <7> on input line 251.
 
 [1{C:/Users/mhh357/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \vbox (badness 2875) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (8.0pt): 
  Make it at least 12.0pt.
@@ -1789,10 +1760,6 @@ Package Fancyhdr Warning: \headheight is too small (8.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 455--458
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (8.0pt): 
  Make it at least 12.0pt.
@@ -1813,7 +1780,9 @@ Package Fancyhdr Warning: \headheight is too small (8.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6]
+[6
+
+]
 
 Package Fancyhdr Warning: \headheight is too small (8.0pt): 
  Make it at least 12.0pt.
@@ -1834,69 +1803,66 @@ Package Fancyhdr Warning: \headheight is too small (8.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9]
-
-Package Fancyhdr Warning: \headheight is too small (8.0pt): 
- Make it at least 12.0pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[10
+[9
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 943.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 943.
- (Linear-Algebra-Assignment-4-Solutions-and-Comments.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 943.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 943.
-Package rerunfilecheck Info: File `Linear-Algebra-Assignment-4-Solutions-and-Co
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 707.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 707.
+ (Linear-Algebra-Assignment-5-Solutions-and-Comments.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 707.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 707.
+Package rerunfilecheck Info: File `Linear-Algebra-Assignment-5-Solutions-and-Co
 mments.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 943.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 707.
  ) 
 Here is how much of TeX's memory you used:
- 32912 strings out of 493305
- 760720 string characters out of 3129368
- 1028129 words of memory out of 3000000
- 35633 multiletter control sequences out of 15000+200000
- 54755 words of font info for 57 fonts, out of 3000000 for 9000
+ 31839 strings out of 493305
+ 727081 string characters out of 3129368
+ 996364 words of memory out of 3000000
+ 34599 multiletter control sequences out of 15000+200000
+ 59830 words of font info for 58 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 62i,20n,96p,770b,1069s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-math
-sy.enc}{C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm
--rm.enc}{C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/l
-m-mathex.enc}{C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
-/lm/lm-mathit.enc}{C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/
-dvips/lm/lm-rmsc.enc}{C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/e
-nc/dvips/lm/lm-ts1.enc}<C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/lm/lmbx10.pfb><C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/lm/lmbxi10.pfb><C:/Users/mhh357/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/mhh357/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Users/mhh357/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Users/mhh357/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Users/mhh357/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/mhh357/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/mhh357/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/mhh35
-7/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/
-mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri8.pfb><C:/Us
-ers/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><
-C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx1
-0.pfb><C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/
-lmsy10.pfb><C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmsy5.pfb><C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/lm/lmsy7.pfb><C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/symbols/msam10.pfb><C:/Users/mhh357/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Users/mhh357/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Linear-Algebra-Assignment-4-Solutions-and-Comments.pdf (10 pa
-ges, 314249 bytes).
+ 62i,17n,96p,1138b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.e
+nc}{C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mat
+hsy.enc}{C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/l
+m-mathit.enc}{C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
+/lm/lm-mathex.enc}{C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/
+dvips/lm/lm-rmsc.enc}<C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmbx10.pfb><C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/lm/lmbxi10.pfb><C:/Users/mhh357/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/mhh357/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Users/mhh357/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Users/mhh357/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi5.pfb><C:/Users/mhh357/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Users/mhh357/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/mhh357/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr5.pfb><C:/Users/mhh357
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Users/mhh
+357/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/
+mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Use
+rs/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C
+:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri8.pf
+b><C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss
+10.pfb><C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm
+/lmssbx10.pfb><C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/lm/lmsy10.pfb><C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmsy5.pfb><C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/lm/lmsy7.pfb><C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/mhh357/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Users/mhh35
+7/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb><C:/Users/mhh357/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/rsfs/
+rsfs10.pfb>
+Output written on Linear-Algebra-Assignment-5-Solutions-and-Comments.pdf (9 pag
+es, 361350 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
+ 182 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

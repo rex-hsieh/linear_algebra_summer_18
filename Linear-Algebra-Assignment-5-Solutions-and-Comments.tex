@@ -1,0 +1,707 @@
+\documentclass{amsart}
+%\documentclass[11pt]{article}
+%\usepackage{amscls}
+\linespread{1}
+%\usepackage[letterpaper,top=1.2in,bottom=1in,right=1.03in,left=1.03in]{geometry}
+\usepackage[letterpaper,top=1.6in,bottom=1.3in,right=1.3in,left=1.3in]{geometry}
+\usepackage{titlesec}
+\usepackage{lipsum}
+
+%\usepackage{libertine}
+%\usepackage[lite,subscriptcorrection,nofontinfo,amsbb,eucal]{mtpro2}
+%slantedGreek
+
+\usepackage{hyphenat}
+\usepackage{graphicx}
+\usepackage{tikz}
+%\usepackage{lastpage, bbding, pmboxdraw}
+
+%\usepackage{color}
+%\definecolor{darkblue}{rgb}{0,0,.6}
+%\definecolor{darkred}{rgb}{.7,0,0}
+%\definecolor{darkgreen}{rgb}{0,.6,0}
+%\definecolor{red}{rgb}{.98,0,0}
+%\usepackage[colorlinks,pagebackref,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=darkred,bookmarksnumbered,plainpages=false]{hyperref}
+%\usepackage{cleveref}
+
+
+\usepackage{pgfplots}
+\usepackage{mathrsfs}
+
+
+
+\usepackage{array, booktabs, caption}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage{hhline}% http://ctan.org/pkg/hhline
+\usepackage{makecell} 
+\usepackage{enumitem}
+\usepackage{bbm}
+\usepackage{soul}
+
+%\usepackage{mtpro2}
+
+
+%\usepackage[nottoc]{tocbibind}
+\usepackage[bottom]{footmisc}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{url}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[normalem]{ulem}
+\usepackage{relsize}
+\usepackage{commath}
+\usepackage{mathtools}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{textcomp}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{#1}}
+\makeatother
+
+
+
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+	\edef\arraystretch{#1}%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{*\c@MaxMatrixCols c}}
+\makeatother
+
+
+\allowdisplaybreaks
+
+\title{\textsc{Assignment 5: Chapters 5 \& 6}}
+\thanks{Summer 2018. Instructor: Antonios-Alexandros Robotis.}
+\date{\today}
+
+
+\usepackage{float}
+
+
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+
+
+\renewcommand\theadalign{lc}
+\renewcommand\theadfont{\bfseries}
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+
+\usepackage{nomencl}
+\makenomenclature
+
+\usepackage{accents}
+
+
+
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.5pt}
+\rhead{\textsc{Assignment 2}}
+\lhead{\textsc{Linear Algebra}}
+%\lhead{\textsc{}}
+\cfoot{\thepage}
+
+\usepackage{lmodern}
+
+\newtheoremstyle{mytheoremstyle} % name
+{\topsep}                    % Space above
+{\topsep}                    % Space below
+{}                   % Body font
+{}                           % Indent amount
+{\bfseries}                   % Theorem head font
+{.}                          % Punctuation after theorem head
+{.5em}                       % Space after theorem head
+{}  % Theorem head spec (can be left empty, meaning ‘normal’)
+
+
+%\theoremstyle{mytheoremstyle}
+%
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}%[section]
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{obs}[definition]{Observation}
+\newtheorem{example}[definition]{Example}
+\newtheorem{assumption}[definition]{Assumption}
+\newtheorem{properties}[definition]{Properties}
+\newtheorem{motivation}[definition]{Motivation}
+\newtheorem{derivation}[definition]{Derivation}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{fact}[definition]{Fact}
+
+\theoremstyle{definition}
+\newtheorem*{solution}{Solution}
+
+%\usepackage{caption}
+%\captionsetup[figure]{labelfont=sc}
+\setlist[enumerate]{font=\bfseries\sffamily}
+
+
+
+%\addto\captionsenglish{\renewcommand*{\proofname}{\scshape Proof.}}
+
+
+%\numberwithin{equation}{section}
+
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\Com}{\mathbb{C}}
+\DeclareMathOperator{\NN}{\mathcal{N}}
+\DeclareMathOperator{\bindist}{\mathsf{B}}
+\DeclareMathOperator{\DD}{D}
+\DeclareMathOperator{\betadist}{Beta}
+\DeclareMathOperator{\E}{\mathbf{E}}
+\DeclareMathOperator{\cov}{Cov}
+\DeclareMathOperator{\var}{Var}
+\DeclareMathOperator{\samplespace}{\mathcal{S}}
+\DeclareMathOperator{\suchthat}{\text{ s.t. }}
+\DeclareMathOperator{\summod}{\accentset{\circ}{+}}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\1}{\mathbbm{1}}
+\DeclareMathOperator{\LL}{\mathscr{L}}
+\DeclareMathOperator{\Imaginary}{Im}
+\DeclareMathOperator{\supp}{Supp}
+\DeclareMathOperator{\powerset}{\mathcal{P}}
+\DeclareMathOperator{\normP}{norm}
+\DeclareMathOperator{\BB}{\mathscr{B}}
+\DeclareMathOperator{\contf}{\mathcal{C}}
+\DeclareMathOperator{\riemannint}{\mathscr{R}}
+\DeclareMathOperator{\osc}{osc}
+\DeclareMathOperator{\sigmaalg}{\sigma-algebra}
+\DeclareMathOperator{\MM}{\mathcal{M}}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\D}{\dif}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\PP}{\mathbf{P}}
+\DeclareMathOperator{\B}{\mathcal{B}}
+\DeclareMathOperator{\CC}{\mathcal{C}}
+\DeclareMathOperator{\sgn}{sgn}
+
+\DeclareMathOperator{\col}{\mathsf{C}}
+\DeclareMathOperator{\nul}{\mathsf{N}}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\zerov}{\mathbf{0}}
+\newcommand{\Tau}{\mathcal{T}}
+\newcommand{\rng}{\mathsf{R}}
+
+%\newcommand{\vect}[1][2]{\LL(#1,#2)}
+\newcommand{\Lspace}[4]{\mathscr{L}^{#1}(#2,#3,#4)}
+\newcommand{\condset}[4]{\left\{ #1  : \: #2 #3 #4 \right\}}
+\newcommand{\ball}[2]{B(#1,#2)}
+\newcommand{\innerproduct}[2]{\left\langle #1,#2 \right\rangle}
+\newcommand{\polyn}[2]{\mathcal{P}_{#1}(#2)}
+\newcommand{\GL}[2]{\mathrm{GL}_{#1}(#2)}
+\newcommand{\proj}[2]{\mathrm{Proj}_{#1} {#2} }
+\newcommand{\SL}[2]{\mathrm{SL}_{#1}(#2)}
+
+%\titleformat{\section}
+%{\centering\Large\normalfont\scshape}{\thesection .}{0.5em}{}
+%
+%\titleformat{\subsection}
+%{\centering\large\normalfont\scshape}{\thesubsection .}{0.5em}{}
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\begin{document}
+	\sloppy
+	\maketitle
+	
+	%In what follows, let
+	%\begin{itemize}[itemsep=0mm]
+	%	\item $V$ be an inner product space.
+	%\end{itemize}
+	
+	This document contains suggested solutions to a selection of \textit{representative} problems (which are graded) from the current homework assignment---a couple from each subsection assigned. They do not include every last detail, but should give you enough guidance to complete each problem fully on your own. 
+	
+	Even though the rest of the homework assignment are checked for completion, the grader will make an attempt at pointing out glaring faults in arguments whenever they arise. As such, some general comments on the completion of this assignment are provided at the end. 
+	
+	Below are a few conventions are used throughout grading your assignments, along with some ground rules for grading:
+	
+	
+	\begin{enumerate}[itemsep=.75em]
+		
+%		\item Raw score is given /100, but normalised to /10 on NYUClasses. The raw score makes partial marks easier to give out.
+		
+		\item Up to 25 marks will be provided for successful completion of the assignment. As always, the actual score given depends on the amount of assignment completed, and quality of the work attempted.
+		
+		\begin{center}
+			\begin{tabular}{c | p{9cm}}
+				\textbf{Mark(s)} & \multicolumn{1}{c}{\textbf{Description}} \\
+				\hline
+				0 & Did not complete anything in the assignment / did not hand it in. \\
+				\hline
+				5 & A lighthearted attempt at a few questions are made. \\
+				\hline
+				10 & Attempts at almost half of the questions were provided---most of which lighthearted. \\
+				\hline
+				15 & Up to half of the questions have been attempted, with some effort put in. \\
+				\hline
+				20 & More than three-fourths of the questions have been attempted, all with considerable progress. \\
+				\hline
+				%			40 & Missing attempts on only a few questions in the assignment. \\
+				%			\hline
+				25 & Attempted every question assigned, and has made considerable progress in every question.
+			\end{tabular}
+		\end{center}
+	
+%		\noindent As always, the actual score given depends on the amount of assignment completed, and quality of the work attempted.
+		
+		%	\item When grading the questions indicated below, the following scale and description are considered:
+		%	
+		%	\begin{center}
+		%		\begin{tabular}{c | c}
+		%			\textbf{Mark(s)} & \textbf{Description} \\
+		%			\hline
+		%			0 & Did not complete anything to solve the problem. \\
+		%			2 & A mostly incorrect attempt has been made. \\
+		%			4 & A somewhat correct attempt has been made. \\
+		%			6 & One to a few mistakes has been made. \\
+		%			8 & One to two mistakes has been made, with wrong calculations or conclusions. \\
+		%			10 & Looks great!
+		%		\end{tabular}
+		%	\end{center}
+		%	
+		%	\bigskip
+		%	
+		%	\noindent Any odd-value scores are given at the discretion of the grader.
+		
+		\item Marks available and breakdown are indicated at the beginning of every question, inside square brackets. 
+		
+		\item Naming convention: in the following section, question indexed as $5.x.y$ should be read as ``question $y$ from chapter $5.x$ in Lay's textbook''.
+		
+		\item If you wish to dispute grading on question(s), please hand in your assignment to the instructor on the next homework submission day---with your comments/disputes written around the question(s).
+		
+	\end{enumerate}
+	
+	
+	
+	\clearpage
+	
+	\section*{Suggested Solutions}
+	
+	\begin{itemize}
+		\item As Alekos noted, the notation $\polyn{n}{\R}$ is used to denote the space of real polynomials of degree $\leq n$ (instead of $\mathbb{P}_n$).
+		\item
+		Instead of Lay's notation $M_{m \times n}$ for the (vector) space of $m \times n$ matrices with entries in $\R$, the notation $\MM_{m \times n}(\R)$ is used throughout here. For square matrices, we will use the simplified notation $\MM_{n}(\R)$ to denote the set of $n \times n$ matrices with entries over $\R$.
+	\end{itemize}
+	
+	\bigskip
+	
+	
+	\begin{enumerate}[itemsep = 2mm]
+		\item[5.4.6] \textit{[\textbf{9}; see below for breakdown]}
+		
+		For this question, let the map be denoted
+		\begin{align*}
+		\fullfunction{\Tau}{\polyn{2}{\R}}{\polyn{4}{\R}}{p(t)}{p(t) + t^2 p(t)}
+		\end{align*}
+		
+		\begin{enumerate}[label=(\alph*)]
+			\item \textit{[\textbf{3}; 1 for any attempt, 1 for correct calculations and final answer, 1 for having all of the above]}
+			
+			Let $a(t) = 2-t+t^2$. Then,
+			\begin{align*}
+			\Tau(q(t)) &= (2 - t + t^2) + t^2 (2 - t + t^2) \\
+			&= 2 - t + 3t^2 - t^3 + t^4
+			\end{align*}
+			
+			
+			\item \textit{[\textbf{3}; 1 for any attempt, 1 for correct verifications of linearity and homogeneity, 1 for having all of the above]}
+			\begin{proof}
+				This should be standard at this point. For all $a,b \in \R$ and $p, q \in \polyn{2}{\R}$ (dropping the argument on the polynomials for notational simplicity),
+				\begin{align*}
+					\Tau(ap + bq) &= (ap + bq) + t^2 (ap + bq) & \\
+					&= ap + (bq + t^2 ap) + t^2 bq & \text{associativity} \\
+					&= ap + (t^2 ap + bq) + t^2 bq & \text{commutativity} \\
+					&= (ap + t^2 ap) + (bq + t^2 bq) & \text{commutativity} \\
+					&= a(p + t^2 p) + b(q + t^2 q) & \text{linearity} \\
+					&= a\Tau(p) + b\Tau(q)
+				\end{align*}
+				as desired.
+			\end{proof}
+		
+			\item \textit{[\textbf{3}; 1 for any attempt at calculating images of the vectors in basis, 1 for having all correct calculations, 1 for having all of the above]}
+			
+			Note that images of the standard basis of $\polyn{2}{\R}$ are
+			\begin{align*}
+			\Tau(1) = 1 + t^2 = \begin{bmatrix}
+			1 \\ 0 \\ 1 \\ 0 \\ 0
+			\end{bmatrix}, \: \:
+			%
+			\Tau(t) = t + t^3 = \begin{bmatrix}
+			0 \\ 1 \\ 0 \\ 1 \\ 0
+			\end{bmatrix}, \: \:
+			%
+			\Tau(t^2) = t^2 + t^4 = \begin{bmatrix}
+			0 \\ 0 \\ 1 \\ 0 \\ 1 
+			\end{bmatrix} 
+			\end{align*}
+			the matrix of linear transformation $\Tau$ is then
+			\begin{align*}
+			M = \begin{bmatrix}
+			1 & & \\ & 1 & \\ 1 & & 1 \\ & 1 & \\ & & 1
+			\end{bmatrix}
+			\end{align*}
+		\end{enumerate}
+		
+		
+		\item[5.5.3] \textit{[\textbf{8}; 1 for any attempt, 1 for setting up the characteristic polynomial \uline{correctly}, 1 for each \uline{correct} eigenvalue---up to 2 available, 1 for attempting to find eigenvectors, 1 for each \uline{correct} eigenvector---up to 2 available, 1 for having all of the above}
+		
+		Let $Q = \begin{bmatrix}
+		 1 & 5 \\ -2 & 3
+		\end{bmatrix}$ act on vectors in $\Com^2$. Then, to diagonalise it, we find the characteristic polynomial
+		\begin{align*}
+		\det(Q - \lambda I) &= (1-\lambda)(3-\lambda) + 10 = 0
+		\end{align*}
+		which gives the equation $\lambda^2 - 4\lambda + 13 = 0$, implying the solutions are
+		\begin{align*}
+		\lambda_i = 2 \pm 3 i, \quad i =1,2
+		\end{align*}
+		where each $i$ takes different sign on the imaginary part. We know the definition of eigenspace is equivalent to the nullspace of $(Q - \lambda I)$ (if this puzzles you, write down the definition of an eigenspace, and manipulate the equation $Qv = \lambda v$ in a way it makes sense). Hence, calculating each gives
+		\begin{align*}
+		\begin{bmatrix}
+			1 - 3i \\ 2
+		\end{bmatrix} & \leftrightsquigarrow (2+3i) \\
+		\begin{bmatrix}
+		1 + 3i \\ 2
+		\end{bmatrix} & \leftrightsquigarrow (2-3i)
+		\end{align*}
+		where $\leftrightsquigarrow $ denotes the relation of correspondence between eigenvector and eigenvalue. If you want to calculate the inverse of the matrix formed by eigenvectors above, you will find the diagonalised form
+		\begin{align*}
+		Q = \begin{bmatrix}
+		1 + 3i & 1 - 3 i \\ 2 & 2 
+		\end{bmatrix} \begin{bmatrix}
+		2 - 3i & \\ & 2 + 3i
+		\end{bmatrix} \begin{bmatrix}
+		- \frac{i}{6} & \frac{1}{4} + \frac{i}{12} \\
+		\frac{i}{6} & \frac{1}{4} - \frac{i}{12} \\
+		\end{bmatrix}
+		\end{align*}
+		(the decomposition is completely optional to write out)
+		
+		
+		\item[6.1.19] \textit{[\textbf{10}; 2 for each part---1 for T/F, 1 for correct justification]}
+		
+		\begin{enumerate}
+			\item \textbf{True}. By definition.
+			
+			\item \textbf{True}. By commutativity of operations in $\R$.
+			
+			\item \textbf{True}. Take the norm in $\R^n$; we then have
+			\begin{align*}
+			\norm{u+v} &= \innerproduct{u+v}{u+v} = \norm{u}^2 + 2 \innerproduct{u}{v} + \norm{v}^2 \\
+			\norm{u-v} &= \innerproduct{u-v}{u-v} = \norm{u}^2 - 2 \innerproduct{u}{v} + \norm{v}^2 
+			\end{align*}
+			and setting them equal gives $4 \innerproduct{u}{v} = 0$.
+			
+			\item \textbf{False}. A counterexample is as follows: let
+			\begin{align*}
+			A = \begin{bmatrix}
+			2& 2 \\ -1 & -1
+			\end{bmatrix}, \: \: w = \begin{bmatrix}
+			1 \\ -1
+			\end{bmatrix}
+			\end{align*}
+			and let $v = \begin{bmatrix}
+			2 \\ -1
+			\end{bmatrix} \in \col(A)$ (and, obviously, $w \in \nul(A)$). But observe $\innerproduct{v}{w} = 2 + 1 = 3 \neq 0$.
+			
+			\item \textbf{True}. This is a part of a larger proposition, which is not difficult at all to prove.
+			\begin{proposition}
+				Let $W$ be a subspace of $\R^n$ spanned by $p$ vectors, ie. $W = \Span \set{v_1,v_2,\dots,v_p}$. Then, $x \in W^\perp$ iff $x \perp w_i$ for all $i=1,2,\dots,p$.
+			\end{proposition}
+			But, for our purpose, we prove $(\Leftarrow)$ direction. We have, for all $w \in W$ (which can be written as a linear combination of $\set{v_i}_{i=1}^{p}$),
+			\begin{align*}
+			\innerproduct{x}{w} &= \innerproduct{x}{\sum_{i=1}^{p} c_i v_i} & \\
+			&= \sum_{i=1}^{p}  \innerproduct{x}{ c_i v_i} & \text{linearity} \\
+			&= \sum_{i=1}^{p} c_i \innerproduct{x}{v_i} & \text{homogeneity} \\
+			&= \sum_{i=1}^{p} c_i \times 0 = 0
+			\end{align*}
+			where the penultimate equality follows by assumption. 
+		\end{enumerate}
+		
+		
+		
+		\item[6.2.24] \textit{[\textbf{10}; 2 for each part---1 for T/F, 1 for correct justification]}
+		
+		\begin{enumerate}[label = (\alph*)]
+			\item \textbf{False}. Orthogonality implies linear independence, since $\innerproduct{u}{v} = 0$.
+			
+			\item \textbf{False}. The vector(s) in the set does not need to of unit length.
+			
+			\item \textbf{True}. Isometries in $\R^n$ preserve lengths, and elements of the orthogonal group are exactly those. The reason for this is as follows: let $Q$ be an orthonormal matrix; then, for some vector $v$,
+			\begin{align*}
+				v^\intercal v = (Qv)^\intercal (Qv) = v^\intercal Q^\intercal Q v = v^\intercal v
+			\end{align*}
+			by properties of transpose and orthonormal matrix.
+			
+			\item \textbf{True}. By definition.
+			
+			\item \textbf{True}. Columns are linearly independent, so such matrix is invertible by invertible matrix theorem.
+		\end{enumerate}
+		
+		
+		
+		\item[6.3.11] \textit{[\textbf{7}; 1 for any attempt, 1 for showing \uline{correctly} that $\set{v_1,v_2}$ is orthogonal, 1 for showing \uline{correctly} that $\set{v_1,v_2}$ is linearly independent, 1 for stating \uline{correctly} the orthogonal projection, 1 for attempting to calculate orthogonal projection, 1 for correct answer, 1 for having all of the above]}
+		
+		Observe that $\innerproduct{v_1}{v_2} = 0$, so $\set{v_1,v_2}$ is an orthogonal set. We know that $W = \Span \set{v_1,v_2}$, and $v_1,v_2$ are linearly independent because both are nonzero. Hence, $\set{v_1,v_2}$ is an orthogonal basis for $W$.
+		
+		We now know the answer is the orthogonal projection of $x$ onto subspace $W$, denoted $\proj{W}{x}$. The calculation is much less interesting:
+		\begin{align*}
+			\proj{W}{x} &= \frac{\innerproduct{x}{v_1}}{\innerproduct{v_1}{v_1}} v_1 + \frac{\innerproduct{x}{v_2}}{\innerproduct{v_2}{v_2}} v_2 \\
+			&= \frac{1}{2} v_1 + \frac{3}{2} v_2 = \begin{bmatrix}
+			3 \\ -1 \\ 1 \\ -1
+			\end{bmatrix}
+		\end{align*}
+		
+		
+		\item[6.4.17] \textit{[\textbf{6}; 2 for each part---1 for T/F, 1 for correct justification]}
+		
+		\begin{enumerate}[label = (\alph*)]
+			\item \textbf{False}. $c=0$ is \textit{not} what we want.
+			
+			\item \textbf{True}. This is by definition.
+			
+			\item \textbf{True}. Use $Q^{\intercal} = Q^{-1}$.
+		\end{enumerate}
+		
+		
+		\item[6.7.16] \textit{[\textbf{5}; 1 for any attempt, 1 for using the fact that $\set{u,v}$ is orthonormal, 2 for correct calculations throughout, 1 for subsequently making the correct conclusion]}
+		
+		The verification is straightforward: for such orthonormal basis $\set{u,v}$, $\innerproduct{u}{v} = 0$. Then, $\norm{u-v} = \sqrt{\innerproduct{u-v}{u-v}} = \sqrt{\norm{u}^2 - 2\innerproduct{u}{v} +\norm{v}^2} = \sqrt{1 - 2 \times 0 + 1} = \sqrt{2}$.
+		
+		\item[6.7.17] \textit{[\textbf{5}; 1 for any attempt, 1 for using linearity, 2 for correct calculations throughout, 1 for subsequently making the correct conclusion]}
+		
+		Starting from the RHS, we have $\norm{u+v}^2 - \norm{u-v}^2 = \innerproduct{u+v}{u+v} - \innerproduct{u-v}{u-v} = \innerproduct{u}{u} + 2 \innerproduct{u}{v} + \innerproduct{v}{v} - \left( \innerproduct{u}{u} + \innerproduct{u}{-v} + \innerproduct{-u}{v} + \innerproduct{v}{v} \right) \stackrel{\text{by linearity}}{=} 4 \innerproduct{u}{v}$. As such, we have the relation $\innerproduct{u}{v} = \frac{\norm{u+v}^2 - \norm{u-v}^2}{4}$ by multiplying both sides by the multiplicative inverse of $4$ (which exists because it is nonzero).
+		
+		\item[6.7.18] \textit{[\textbf{5}; 1 for any attempt, 1 for recognising linearity/homogeneity of inner products, 2 for correct calculations throughout, 1 for subsequently making the correct conclusion]}
+		
+		This is the \textbf{parallelogram identity in inner product spaces}, and is incredibly useful in a lot of contexts (just as useful as triangle and Cauchy-Schwarz inequalities). The proof is deceptively simple: from LHS, we have $\norm{u+v}^2 + \norm{u-v}^2 = \innerproduct{u+v}{u+v} + \innerproduct{u-v}{u-v} = \innerproduct{u}{u} + 2 \innerproduct{u}{v} + \innerproduct{v}{v} + \left( \innerproduct{u}{u} + \innerproduct{u}{-v} + \innerproduct{-u}{v} + \innerproduct{v}{v} \right) \stackrel{\text{by linearity}}{=} 2 \norm{u}^2 + 2 \innerproduct{u}{v} - 2 \innerproduct{u}{v} + 2 \norm{v}^2 = 2 \norm{u}^2 + 2 \norm{v}^2$.
+		
+		\item[6.7.22] \textit{[\textbf{5}; 1 for any attempt, 1 for correct setup, 1 for some attempt at integration, 1 for correct answer, 1 for having all of the above]}
+		
+		Let $f(t) = 5t - 3$ and $g(t) = t^3 - t^2$. Then, by the inner product defined in the question, we have
+		\begin{align*}
+			\innerproduct{f}{g} &= \int_{0}^{1} (5t-3)(t^3 - t^2) \D t \\
+			&= \int_{0}^{1} (5t^4 - 8t^3 + 3t^2) \D t \\
+			&= 1 - 2 + 1 = 0
+		\end{align*}
+		
+		
+		\item[6.7.24] \textit{[\textbf{5}; 1 for any attempt, 1 for correct setup, 1 for some attempt at integration, 1 for correct answer, 1 for having all of the above]}
+	
+		By the inner product defined in the question, we have
+		\begin{align*}
+			\norm{g} = \sqrt{\innerproduct{g}{g}} &= \sqrt{\int_0^1 (t^3 - t^2)^2 \D t} \\
+			&= \sqrt{\frac{1}{7} - \frac{1}{3} + \frac{1}{5}} = \frac{1}{\sqrt{105}}
+		\end{align*}
+	\end{enumerate}
+	
+	%\bigskip %\bigskip
+	
+	\clearpage
+	
+	Below are the proofs of propositions laid out in the extra credit questions. These will be graded far more harshly than the questions from above. Marks are awarded for recognising overarching ideas in the propositions/theorems, and much less so for attempts. % For Extra Credit 2), I have been instructed to be very lenient, so as long as you said something meaningful, you will get 10 marks.
+	
+	\begin{enumerate}
+		
+		\item[Extra Credit 1]
+%		\begin{enumerate}[label=\arabic*.]
+%			\item Determine a basis for $\mathbb{C}=\condset{a+bi}{a,b}{\in }{\mathbb{R}}$ as a vector space over $\mathbb{R}$. Here, 
+%			\begin{equation*}
+%			(a+bi)+(c+di)=(a+c)+(b+d)i
+%			\end{equation*}
+%			and $i^2=-1$. Using your basis, define an explicit isomorphism $T:\mathbb{C}\to\mathbb{R}^k$ for an appropriate $k\in \mathbb{N}$ and check that it \textit{is} in fact an isomorphism. 
+%			
+%			\item If two vector spaces $V$ and $W$ over $\mathbb{R}$ are isomorphic, $V\cong W$, then is it justified to think of them as the same vector space? Why or why not?  
+%		\end{enumerate}
+		
+%		For an inner product space $V$, with inner product $\langle \cdot,\cdot\rangle:V\times V\to \mathbb{R}$, state the generalized version of the Gram-Schmidt Process derived for $\mathbb{R}^n$. That is, explain Gram-Schmidt for a general inner product space.
+		
+		For some inner product space, choose an arbitrary set of basis $U = \set{u_1,u_2,\dots,u_n}$. Then, we construct the set of orthogonal vectors by projecting each vector onto the subspace spanned by the previous orthogonal vectors. In other words,
+		\begin{align*}
+			v_1 &= u_1 \\
+			v_2 &= u_2 - \proj{v_1}{u_2} \\
+			v_3 &= u_3 - \proj{\Span\set{v_1,v_2}}{u_3} \\
+			v_4 &= u_4 - \proj{\Span\set{v_1,v_2,v_3}}{u_4} \\
+			\vdots & \phantom{==} \vdots \\
+			v_n &= u_n - \proj{\Span\set{v_1,v_2,v_3,\dots,v_{n-1}}}{u_n}
+		\end{align*}
+		which can be simplified to
+		\begin{align*}
+			v_1 &= u_1 \\
+			v_2 &= u_2 - \frac{\innerproduct{v_1}{u_2}}{\innerproduct{v_1}{v_1}} v_1 \\
+			v_3 &= u_3 - \frac{\innerproduct{v_1}{u_3}}{\innerproduct{v_1}{v_1}} v_1 - \frac{\innerproduct{v_2}{u_3}}{\innerproduct{v_2}{v_2}} v_2 \\
+			v_4 &= u_4 - \frac{\innerproduct{v_1}{u_4}}{\innerproduct{v_1}{v_1}} v_1 - \frac{\innerproduct{v_2}{u_4}}{\innerproduct{v_2}{v_2}} v_2 - \frac{\innerproduct{v_3}{u_4}}{\innerproduct{v_3}{v_3}} v_3 \\
+			\vdots & \phantom{==} \vdots \\
+			v_n &= u_n - \left( \sum_{i=1}^{n-1} \frac{ \innerproduct{v_i}{u_n} }{\innerproduct{v_i}{v_i}} v_i \right)
+		\end{align*}
+		
+		\item[Extra Credit 2]
+		
+		Given the vector space $\contf([0,1],\mathbb{R})$ consisting of continuous functions $f:[0,1]\to \mathbb{R}$, define an inner product by 
+		\begin{equation}
+		\label{eqinnerproductC}
+		\langle f,g\rangle =\int_0^1 f(t)g(t) \D t
+		\end{equation}
+		
+%		\begin{enumerate}[label=\arabic*.]
+%			\item Exhibit a pair of orthogonal functions, $f\perp g$ with respect to this inner product $(f,g\ne 0$).
+%			
+%			\item Notice that given $f\in \contf([0,1],\mathbb{R})$, 
+%			\begin{equation*}
+%			\lVert f\rVert =\sqrt{\langle f,f\rangle}=\sqrt{\int_0^1 f(t)^2 \D t}.
+%			\end{equation*}
+%			This is called the $\LL^2$-norm on $\contf([0,1],\mathbb{R})$. Find a non-constant function in $\contf([0,1],\mathbb{R})$ with norm $\pi$. I.e., $\lVert f\rVert =\pi$. 
+%		\end{enumerate}
+	
+		Before we answer the questions, let us rigourously verify that \eqref{eqinnerproductC} is indeed an inner product in $\contf([0,1],\R)$.
+		
+		\begin{proof}
+			$\innerproduct{f}{g} = \innerproduct{g}{f}$, $\innerproduct{f+g}{h} = \innerproduct{f}{h} + \innerproduct{g}{h}$ and $\innerproduct{cf}{g} = c\innerproduct{f}{g}$ are all trivially true $\forall f,g,h \in \contf([0,1], \R)$ and $c \in \R$, using linearity of the Riemann integral, as well as commutativity and associativity of addition over $\R$. The much harder one is that $\innerproduct{f}{f} \geq 0$ under the same qualifiers from before. Of course, if $f$ is the constant zero function, then the inner product gives zero. The more interesting case is when $f$ is a nonzero continuous function. We now use the fact that $f$ is continuous: for all $\epsilon >0$, there exists $\delta > 0 \suchthat \abs{x-y} < \delta \implies \abs{f(x)-f(y)} < \epsilon$. Renaming functions if you want (ie. let $g(x) = f(x)^2$), we can say that $\forall \epsilon>0$, $\exists \delta > 0 \suchthat \abs{x-y} < \delta \implies \abs{f(x)^2 - f(y)^2 } < \epsilon$ (since $f(x)^2 $ is still continuous as the composition of two continuous functions). In particular, this implies 
+%			By reverse triangle inequality, we have
+%			\begin{align*}
+%				\epsilon > \abs{f(x)^2 - f(y)^2 } &\geq \abs{ \abs{f(x)^2} - \abs{f(y)^2} } = \abs{ \abs{f(x)}^2 - \abs{f(y)}^2 }
+%			\end{align*}
+%			which implies
+			\begin{equation}
+			\label{eqapproxquantity}
+			\abs{x-y} < \delta \implies f(x)^2 - f(y)^2 >  - \epsilon 
+			\end{equation}
+			We now want to approximate $\innerproduct{f}{f}$ by a quantity independent of the choice of $x$. Since the choice of $\epsilon$ is arbitrary, let $\epsilon = \frac{f(y)^2}{2}$ for some $y \in (0,1)$, and \eqref{eqapproxquantity} reads $\abs{x-y} < \delta \implies f(x)^2 > \frac{f(y)^2}{2}$. Then, we have
+			\begin{align*}
+				\innerproduct{f}{f} &= \int_{0}^{1} f(x)^2 \D x \\
+				&\geq \int_{y-\epsilon}^{y+\epsilon} f(x)^2 \D x \\
+				&>  \int_{y-\epsilon}^{y+\epsilon} \frac{f(y)^2}{2} \D x \\
+				&= 2 \epsilon \frac{f(y)^2}{2} = \epsilon f(y)^2 > 0
+			\end{align*}
+			hence the property is verified.
+		\end{proof}
+		
+		In addition, the \textit{$\LL^2$-norm}
+		\begin{equation}
+		\label{eqL2}
+		\norm{f} = \sqrt{\innerproduct{f}{f}} = \sqrt{ \int_{0}^{1} f(x)^2 \D x }, \qquad \forall f \in \contf([0,1], \R)
+		\end{equation}
+		is the norm in the space of $\LL^2$ functions\footnote{Remark: $\LL^2$ is complete and is endowed with an inner product, making it a Hilbert space.}. The canonical way of defining this is by defining the Lebesgue integral (which agrees with the Riemann integral on the real line, hence \eqref{eqL2} makes sense), and defining a measure $\lambda$ (called the Lebesgue measure). Regardless of the technicalities, the quantity \eqref{eqL2} still defines a norm on the space of continuous functions.
+		
+		For the first part, we want the integrand to be periodic on $[0,1]$. Trigonometric functions are periodic, and one can easily check that for $f(x) = \sin(\pi x)$ and $g(x) = \sin(2\pi x)$, $\int_{0}^{1} f(x) g(x) \D x = 0$. For another, if you want to find examples of polynomials that are orthogonal, \#6.7.22 provides an example, for $f(x) = 5x - 3$ and $g(x) = x^3 - x^2$.
+		
+		With a bit of knowledge in calculus, one can use the Taylor series expansions for $\sin x$ or $\cos x$ to see that trigonometric functions should be in our integrand. This is the basis of Fourier analysis, with which some intuitions on such integrals are available instantly. A possible example is $f(x) = \sqrt{2} \sin(\pi x)$ (a non-contrived one, that is). There are endless examples that are of the contrived nature---for instance, one can always rescale $f(x) = x$ to obtain $\widetilde{f}(x) = \sqrt{3} \pi x $, and observe that $\norm{\widetilde{f}} = \pi$. A correct example (along with correct verifications) warrants the full marks.
+		
+		
+		
+		\item[Remarks] \#6.7.19 is an interesting problem. The problem can be solved with a few calculations:
+		\begin{align*}
+		\abs{\innerproduct{u}{v}} &= \abs{\begin{bmatrix}
+			\sqrt{ab} \\ \sqrt{ab}
+			\end{bmatrix}} = 2\sqrt{ab} \\
+		\norm{u} = \norm{v} &= \sqrt{a+b}
+		\end{align*}
+		and by Cauchy-Schwarz, we have $2\sqrt{ab} \leq a + b \implies \sqrt{ab} \leq \frac{a+b}{2}$. This is the famous \textit{AM-GM inequality}, which is closely related to Jensen's inequality---in the sense that AM-GM can be proven from it. These inequalities are extremely useful in practical terms.
+		
+		If you choose to study more mathematics, one of the most useful (and oddly mysterious) tools is Fourier analysis. The basic motivation for Fourier analysis is we want to represent functions by an infinite sum (or series) of elementary functions. The way to go about it (in the classical sense, due to Fourier) is to choose an \textit{orthonormal basis}, which is
+		\begin{equation}
+		\label{eqtrigonset}
+		\begin{aligned}
+		\phi_0 (x) &= \frac{1}{\sqrt{2\pi}} \\
+		\phi_{2n-1} (x) &= \frac{\cos nx}{\sqrt{\pi}} \\
+		\phi_{2n} (x) &= \frac{\sin nx}{\sqrt{\pi}} 
+		\end{aligned}
+		\end{equation}
+		and ask ourselves \textit{in what sense does the sequence of functions converge to the original function}. This is a part of a general approach called \textit{approximate identities}, and the validity of these approaches are not always easy to prove. It is, by and large, very difficult to prove the modes of convergence of these sequences of functions, and---if we can---the methods are nontrivial at best. Insight from linear algebra gets us a long way in doing Fourier analysis: \textit{understanding} discrete Fourier transform, continuous linear functionals in Schwartz spaces, and analysis of smooth functions (and so on) all require a strong working knowledge of linear algebra.
+		
+		One can never learn enough linear algebra in one's career as a mathematician, as it is one of the most fundamental tools we have to simplify the problems we have at hand.
+	\end{enumerate}
+	
+	\clearpage
+	
+	
+	
+\section*{General Comments}
+
+
+The point of studying mathematics is to be able to come up with \textit{simple, nontrivial examples}, from which one can think about the fundamental principles underlying them. Some of these T/F questions help one in doing exactly that. Some of these proofs-type questions also test one's understanding of the fundamentals---including, but not limited to, definitions, basic propositions, some theorems and their consequences, and so on.
+
+Some general comments for the homework (as a whole):
+\begin{itemize}
+	\item Most people did an excellent job providing counterexamples, and I was pleasantly surprised by the growing number of people who attempted to justify their responses to T/F questions.
+	
+	\item To those who did the extra credit question(s): they were all valiant attempts. There were good ideas in those responses, and it was good seeing that you know what needs to be proven.
+\end{itemize}
+
+\noindent Here are some comments for each question (some of which familiar from the previous homework):
+
+\bigskip
+
+\begin{enumerate}[itemsep = 2mm]
+	\item[5.4.6] 
+	
+	
+	
+	\item[5.5.3]
+	
+	
+	
+	\item[6.1.19]
+	
+	
+	
+	\item[6.2.24]
+	
+	
+	
+	\item[6.3.11]
+	
+	
+	\item[6.4.17]
+	
+	
+	\item[6.7.16]
+	
+	
+	\item[6.7.17]
+	
+	
+	\item[6.7.18]
+	
+	
+	\item[6.7.22]
+	
+	
+	\item[6.7.24]
+	
+	
+	
+	\item[Extra Credit 1]
+	
+	
+	
+	\item[Extra Credit 2]
+\end{enumerate}
+
+	
+\end{document}
