@@ -1,0 +1,314 @@
+\documentclass{amsart} %leqno
+\usepackage[left=1.3in,right=1.3in,bottom=1.6in]{geometry}
+%\usepackage{titlesec}
+%\usepackage{lipsum}
+\usepackage{mathrsfs}
+%\usepackage{libertine}
+%\usepackage[lite,subscriptcorrection,nofontinfo,amsbb,eucal]{mtpro2}
+
+%\usepackage{lmodern}
+
+\linespread{1}
+
+%\usepackage{sansmathfonts}
+%\usepackage{cmbright}
+%\usepackage[T1]{fontenc}
+%\renewcommand*\familydefault{\sfdefault}
+
+%slantedGreek
+
+\usepackage{hyphenat}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{accents}
+
+
+\usepackage{array, booktabs, caption}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage{hhline}% http://ctan.org/pkg/hhline
+\usepackage{makecell} 
+\usepackage{enumitem}
+\usepackage{bbm}
+\usepackage{soul}
+
+%\usepackage{mtpro2}
+
+
+%\usepackage[nottoc]{tocbibind}
+\usepackage[bottom]{footmisc}
+%\usepackage{natbib}
+
+
+\usepackage[normalem]{ulem}
+\usepackage{relsize}
+\usepackage{commath}
+\usepackage{mathtools}
+\allowdisplaybreaks
+
+
+
+%\usepackage{fancyhdr}
+%
+%\pagestyle{fancy}
+%\fancyhf{}
+%%\renewcommand{\headrulewidth}{0.5pt}
+%%\rhead{\textsc{}}
+%%\cfoot{\textsc{Honors Analysis II}}
+%%\lhead{\textsc{Meng Hsuan (Rex) Hsieh}}
+%%\cfoot{}
+%\fancyhead[C]{\rightmark}
+%\fancyhead[RO,LE]{\thepage}
+
+\usepackage{float}
+
+\usepackage{color}
+\usepackage{commath}
+\usepackage{amsthm}
+
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{textcomp}
+
+\renewcommand\theadalign{lc}
+\renewcommand\theadfont{\bfseries}
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,
+	linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
+	citecolor=green,        % color of links to bibliography
+	filecolor=magenta,      % color of file links
+	urlcolor=cyan           % color of external links
+}
+
+\renewcommand{\epsilon}{\varepsilon}
+
+
+\newtheoremstyle{mytheoremstyle} % name
+{\topsep}                    % Space above
+{\topsep}                    % Space below
+{}                   % Body font
+{}                           % Indent amount
+{\bfseries}                   % Theorem head font
+{.}                          % Punctuation after theorem head
+{.5em}                       % Space after theorem head
+{}  % Theorem head spec (can be left empty, meaning ‘normal’)
+
+
+\theoremstyle{mytheoremstyle}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem*{rmk}{Remark}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{obs}[definition]{Observation}
+\newtheorem{example}[definition]{Example}
+\newtheorem{assumption}[definition]{Assumption}
+\newtheorem{properties}[definition]{Properties}
+\newtheorem{motivation}[definition]{Motivation}
+\newtheorem{assertion}[definition]{Assertion}
+\newtheorem{derivation}[definition]{Derivation}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{fact}[definition]{Fact}
+\newtheorem{consequence}[definition]{Consequence}
+
+%\addto\captionsenglish{\renewcommand*{\proofname}{\scshape Proof.}}
+
+
+%\numberwithin{equation}{section}
+
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\Com}{\mathbb{C}}
+\DeclareMathOperator{\NN}{\mathcal{N}}
+\DeclareMathOperator{\bindist}{\mathsf{B}}
+\DeclareMathOperator{\DD}{D}
+\DeclareMathOperator{\betadist}{Beta}
+\DeclareMathOperator{\E}{\mathbf{E}}
+\DeclareMathOperator{\cov}{Cov}
+\DeclareMathOperator{\var}{Var}
+\DeclareMathOperator{\samplespace}{\mathcal{S}}
+\DeclareMathOperator{\suchthat}{\text{ s.t. }}
+\DeclareMathOperator{\summod}{\accentset{\circ}{+}}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\1}{\mathbbm{1}}
+\DeclareMathOperator{\LL}{\mathscr{L}}
+\DeclareMathOperator{\Imaginary}{Im}
+\DeclareMathOperator{\supp}{Supp}
+\DeclareMathOperator{\powerset}{\mathcal{P}}
+\DeclareMathOperator{\normP}{norm}
+\DeclareMathOperator{\BB}{\mathscr{B}}
+\DeclareMathOperator{\contf}{\mathcal{C}}
+\DeclareMathOperator{\riemannint}{\mathscr{R}}
+\DeclareMathOperator{\osc}{osc}
+\DeclareMathOperator{\sigmaalg}{\sigma-algebra}
+\DeclareMathOperator{\MM}{\mathcal{M}}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\D}{\dif}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\PP}{\mathbf{P}}
+\DeclareMathOperator{\B}{\mathcal{B}}
+\DeclareMathOperator{\CC}{\mathcal{C}}
+\DeclareMathOperator{\sgn}{sgn}
+
+\DeclareMathOperator{\col}{\mathsf{C}}
+\DeclareMathOperator{\nul}{\mathsf{N}}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\zerov}{\mathbf{0}}
+\newcommand{\Tau}{\mathcal{T}}
+\newcommand{\rng}{\mathsf{R}}
+
+%\newcommand{\vect}[1][2]{\LL(#1,#2)}
+\newcommand{\Lspace}[4]{\mathscr{L}^{#1}(#2,#3,#4)}
+\newcommand{\condset}[4]{\left\{ #1  : \: #2 #3 #4 \right\}}
+\newcommand{\ball}[2]{B(#1,#2)}
+\newcommand{\innerproduct}[2]{\left\langle #1,#2 \right\rangle}
+\newcommand{\polyn}[2]{\mathcal{P}_{#1}(#2)}
+\newcommand{\GL}[2]{\mathrm{GL}_{#1}(#2)}
+\newcommand{\proj}[2]{\mathrm{Proj}_{#1} {#2} }
+\newcommand{\SL}[2]{\mathrm{SL}_{#1}(#2)}
+
+%\titleformat{\section}
+%{\centering\Large\normalfont\scshape}{\thesection .}{0.5em}{}
+%
+%\titleformat{\subsection}
+%{\centering\large\normalfont\scshape}{\thesubsection .}{0.5em}{}
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\begin{document}
+
+\title{Linear Algebra: (Fairly Difficult) Practice Final Exam}
+
+\maketitle
+
+\noindent These are some difficult (but doable) practice problems for the linear algebra final exam. These are presented in an increasing level of difficulty. \\\\
+
+
+\begin{enumerate}[itemsep=1em]
+
+	\item Prove that similar matrices have the same characteristic polynomial.
+
+	\item Let 
+	\begin{align*}
+		W = \begin{bmatrix}
+		0 & -2 \\ 1 & 3
+		\end{bmatrix}
+	\end{align*}
+	Show that $W$ is diagonalizable, by finding a $Q \in \MM_2(\R)$ such that $Q^{-1} W Q $ is a diagonal matrix. Derive a formula for $W^{n}$ for some arbitrary $n \in \N$.
+
+
+	\item Prove or disprove (ie. true or false):
+	\begin{enumerate}
+		\item Any linear transformation on a $n$-dimensional vector space that has less than $n$ distinct eigenvalues is not diagonalizable.
+		
+		\item Two distinct eigenvectors corresponding to the same eigenvalue are always linearly dependent.
+		
+		\item If $\lambda$ and $\eta$ are distinct eigenvalues of a linear transformation $T$, then $E_{\lambda} \cap E_{\eta} = \set{0}$, where $E_{\lambda}$ is the eigenspace corresponding to the eigenvalue $\lambda$.
+		
+		\item Let $A \in \MM_{n} (\R)$. If $A$ is diagonalizable, then $A^{-1}$ is diagonalizable.
+		
+		\item The $m \times n$ zero matrix is the only $m \times n$ matrix of rank $0$.
+	\end{enumerate}
+
+	\item Prove or disprove: let $A \in \MM_{n}(\R)$.
+	\begin{enumerate}
+		\item If $A$ is diagonalizable, then $A^2$ is diagonalizable.
+		\item If $A^2$ is diagonalizable, then $A$ is diagonalizable.
+	\end{enumerate}
+
+	\item Let $V = \polyn{3}{\R}$. Let $T(a+bx+cx^2+dx^3) = -d + (-c+d)x + (a+b-2c)x^2 + (-b+c-2d)x^3$, and $\mathcal{B} = \set{1-x+x^3, 1+x^2, 1, x+x^2}$.
+
+	Show that $T$ is a linear transformation. Then, find the matrix of linear transformation with respect to the basis $\mathcal{B}$ described above.
+	
+	
+	\item Let $V = \MM_2(\R)$. Let
+	\begin{align*}
+	T \left( \begin{bmatrix}
+	a & b \\ c & d
+	\end{bmatrix} \right) = \begin{bmatrix}
+	-7a - 4b + 4c - 4d & b \\ -8a -4b + 5c -4d & d
+	\end{bmatrix}
+	\end{align*}
+	and
+	\begin{align*}
+	\mathcal{C} = \set{ \begin{bmatrix}
+		1 & 0 \\ 1 & 0
+		\end{bmatrix}, \begin{bmatrix}
+		-1 & 2 \\ 0 & 0
+		\end{bmatrix}, \begin{bmatrix}
+		1 & 0 \\ 2 & 0
+		\end{bmatrix}, \begin{bmatrix}
+		-1 & 0 \\ 0 & 2
+		\end{bmatrix} }
+	\end{align*}
+	
+	Show that $T$ is a linear transformation. Then, find the matrix of linear transformation with respect to the basis $\mathcal{C}$ described above.
+
+
+	\item A \textit{scalar matrix} is a square matrix of the form $\lambda I$ for some scalar $\lambda$.
+	
+	\begin{enumerate}
+		\item Show that if a square matrix $A$ is similar to a scalar matrix $\lambda I$, then $A = \lambda I$.
+		\item Show that a diagonalizable matrix having only one eigenvalue is a scalar matrix.
+		\item Show that
+		\begin{align*}
+		\begin{bmatrix}
+		1 & 1 \\ & 1
+		\end{bmatrix}
+		\end{align*}
+		is not diagonalizable.
+	\end{enumerate}
+
+	\item Let $A \in \MM_{m \times n}$, and suppose $v$ and $w$ are orthogonal eigenvectors of $A^{\intercal}A$. Show that $Av$ and $Aw$ are orthogonal.
+	
+	\item Let $V$ be an inner product space, and $S = \set{x_i}_{i=1}^{n}$ be an orthonormal subset in $V$. Fix $x \in V$. Then the following holds:
+	\begin{equation}
+		\label{eq1}
+		\tag{$\star$}
+		\sum_{k=1}^{n} \innerproduct{x}{x_k} \leq \norm{x}^2
+	\end{equation}
+	This is referred to as \textit{Bessel's inequality}. For the purpose of the problem, assume the result has already been proven. As a reminder, $\norm{x} = \sqrt{\innerproduct{x}{x}}$.
+	
+	Show that Bessel's inequality \eqref{eq1} is an equality if and only if $x \in \Span(S)$.
+	
+	\begin{rmk}
+		Note that two consequences follow from \eqref{eq1}: the series $\sum_{k=1}^{\infty} \innerproduct{x}{x_k}$ converges by taking limits of both sides, and just the fact that we can find an orthonormal set in $V$ can allow us to find the norm by an less cumbersome calculation.
+	\end{rmk}
+
+	
+	\item Let $A \in \MM_{n}(\R)$. $A$ is \textit{nilpotent} if $A^k = 0$ (where $0$ is the zero matrix) for some $k \in \N$. For instance, $\begin{bmatrix}
+	0 & 1 \\ 0 & 0 
+	\end{bmatrix}$ is nilpotent.
+	\begin{enumerate}
+		\item Let $\lambda$ be an eigenvalue to a nilpotent matrix $A$. Show that $\lambda = 0$. Hint: proceed by definition.
+		
+		\item Show that if $A$ is both nilpotent and diagonalizable, then $A$ is the zero matrix. Hint: use the previous part.
+		
+		\item Let $B$ be the matrix representation of the following linear transformation:
+		\begin{align*}
+		\fullfunction{S}{\polyn{5}{R}}{\polyn{5}{R}}{p(x)}{\dod{p}{x}}
+		\end{align*}
+		Without doing any calculations, explain why $B$ must be nilpotent.
+	\end{enumerate}
+
+\end{enumerate}
+
+
+	
+\end{document}
